@@ -1,0 +1,881 @@
+{
+  "_readme": [
+    "HCC 离线 fixture。数值取自 hcc_target-evidence-model 已核对过的真实数据，",
+    "用途是让通用管线在无 API 时能端到端跑通，并作为『HCC 回归校验』的输入：",
+    "通用 Agent 跑出来的排序应当能复现既有 HCC 模型的已知答案 GPC3 > ASGPR > TFRC。",
+    "emulates 字段声明该条模拟哪个真实源，用于复现真实的独立来源计数与冲突检测。",
+    "AFP / MUC1 / MET 是刻意加入的负例与冲突例，用于演示 early-kill 与冲突重规划。"
+  ],
+  "cancer_id": "hcc",
+  "candidate_pool": [
+    {
+      "symbol": "GPC3",
+      "aliases": [
+        "GPC3",
+        "SGB",
+        "DGSX"
+      ],
+      "protein_name": "Glypican-3",
+      "discovered_by": "fixtures:tumor_expression_scan"
+    },
+    {
+      "symbol": "ASGR1",
+      "aliases": [
+        "ASGPR",
+        "ASGR2",
+        "CLEC4H1"
+      ],
+      "protein_name": "Asialoglycoprotein receptor 1",
+      "discovered_by": "fixtures:known_liver_receptor"
+    },
+    {
+      "symbol": "TFRC",
+      "aliases": [
+        "CD71",
+        "TR",
+        "TFR1"
+      ],
+      "protein_name": "Transferrin receptor protein 1",
+      "discovered_by": "fixtures:tumor_expression_scan"
+    },
+    {
+      "symbol": "AFP",
+      "aliases": [
+        "AFP",
+        "HPAFP"
+      ],
+      "protein_name": "Alpha-fetoprotein",
+      "discovered_by": "fixtures:tumor_expression_scan"
+    },
+    {
+      "symbol": "EPCAM",
+      "aliases": [
+        "EPCAM",
+        "TACSTD1",
+        "CD326"
+      ],
+      "protein_name": "Epithelial cell adhesion molecule",
+      "discovered_by": "fixtures:membrane_proteome_scan"
+    },
+    {
+      "symbol": "MUC1",
+      "aliases": [
+        "MUC1",
+        "CD227",
+        "PEM"
+      ],
+      "protein_name": "Mucin-1",
+      "discovered_by": "fixtures:membrane_proteome_scan"
+    },
+    {
+      "symbol": "MET",
+      "aliases": [
+        "MET",
+        "HGFR",
+        "c-Met"
+      ],
+      "protein_name": "Hepatocyte growth factor receptor",
+      "discovered_by": "fixtures:membrane_proteome_scan"
+    }
+  ],
+  "observations": [
+    {
+      "target": "GPC3",
+      "dimension": "tumor_expression",
+      "value": 6510.8,
+      "unit": "RSEM",
+      "emulates": "tcga",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "lihc_tcga_rna_seq_v2_mrna",
+      "source_ref": "cBioPortal lihc_tcga_rna_seq_v2_mrna median 6510.8",
+      "claim": "GPC3 在 TCGA-LIHC 队列 bulk RNA median 为 6510.8"
+    },
+    {
+      "target": "GPC3",
+      "dimension": "normal_reference_expression",
+      "value": 0.94,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 GPC3 Liver 0.94 TPM",
+      "claim": "GPC3 在 GTEx 正常肝 median 表达仅 0.94 TPM",
+      "context": {
+        "tissue": "Liver"
+      }
+    },
+    {
+      "target": "GPC3",
+      "dimension": "normal_reference_expression",
+      "value": 6.3,
+      "unit": "nTPM",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000147257 liver 6.3 nTPM",
+      "claim": "HPA 显示 GPC3 正常肝低表达 6.3 nTPM",
+      "context": {
+        "tissue": "Liver"
+      }
+    },
+    {
+      "target": "GPC3",
+      "dimension": "offtarget_expression",
+      "value": 1.7,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 GPC3 肝外最高组织",
+      "claim": "GPC3 肝外成人正常组织最高表达约 1.7 TPM，脱靶暴露有限",
+      "context": {
+        "tissue": "Spleen"
+      }
+    },
+    {
+      "target": "GPC3",
+      "dimension": "offtarget_expression",
+      "value": 669.8,
+      "unit": "nTPM",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000147257 placenta 669.8 nTPM",
+      "claim": "HPA 显示 GPC3 在胎盘富集表达 669.8 nTPM（oncofetal 抗原的发育期信号）",
+      "context": {
+        "tissue": "placenta"
+      }
+    },
+    {
+      "target": "GPC3",
+      "dimension": "surface_localization",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000147257 subcellular",
+      "claim": "HPA 亚细胞定位为 plasma membrane（GPI-anchor）",
+      "context": {
+        "location_text": "plasma membrane, GPI-anchor"
+      }
+    },
+    {
+      "target": "GPC3",
+      "dimension": "extracellular_accessibility",
+      "value": 550.0,
+      "unit": "aa",
+      "emulates": "uniprot",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "uniprotkb",
+      "source_ref": "UniProt P51654",
+      "claim": "GPC3 为 GPI 锚定蛋白，胞外域约 550 aa，配体可及性好",
+      "context": {
+        "extracellular_span_aa": 550
+      }
+    },
+    {
+      "target": "GPC3",
+      "dimension": "internalization",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "medium",
+      "dataset": "pubmed",
+      "source_ref": "PMID 31024850",
+      "claim": "GPC3 可经受体介导内吞，已有 CAR-T 与偶联物研究支持",
+      "context": {
+        "evidence_kind": "receptor_class_inferred",
+        "quote": "GPC3 is internalized upon antibody binding, supporting antibody-drug conjugate approaches"
+      }
+    },
+    {
+      "target": "GPC3",
+      "dimension": "clinical_precedent",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "clinicaltrials",
+      "layer": "clinical",
+      "reliability": "high",
+      "dataset": "clinicaltrials",
+      "source_ref": "Clin Cancer Res CCR-19-3259",
+      "claim": "GPC3-CAR T 已进入 phase 1 临床",
+      "context": {
+        "stage": "phase 1"
+      }
+    },
+    {
+      "target": "GPC3",
+      "dimension": "safety",
+      "value": 1.2,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 GPC3 关键器官",
+      "claim": "GPC3 在骨髓/全血/心/脑等关键器官表达均低（最高 1.2 TPM）"
+    },
+    {
+      "target": "GPC3",
+      "dimension": "ligand_availability",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "medium",
+      "dataset": "pubmed",
+      "source_ref": "DOI 10.3389/fimmu.2016.00690",
+      "claim": "已有多种抗 GPC3 抗体与 scFv 可用作靶向配体",
+      "context": {
+        "quote": "anti-GPC3 scFv derived CAR T cells suppressed tumor growth in PDX models"
+      }
+    },
+    {
+      "target": "ASGR1",
+      "dimension": "tumor_expression",
+      "value": 11790.8,
+      "unit": "RSEM",
+      "emulates": "tcga",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "lihc_tcga_rna_seq_v2_mrna",
+      "source_ref": "cBioPortal lihc_tcga_rna_seq_v2_mrna median 11790.8",
+      "claim": "ASGR1 在 TCGA-LIHC bulk RNA median 为 11790.8，但 bulk 易混入正常肝细胞信号"
+    },
+    {
+      "target": "ASGR1",
+      "dimension": "normal_reference_expression",
+      "value": 408.77,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 ASGR1 Liver 408.77 TPM",
+      "claim": "ASGR1 在 GTEx 正常肝极高表达 408.77 TPM",
+      "context": {
+        "tissue": "Liver"
+      }
+    },
+    {
+      "target": "ASGR1",
+      "dimension": "normal_reference_expression",
+      "value": 1142.4,
+      "unit": "nTPM",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000141505 liver 1142.4 nTPM",
+      "claim": "HPA 显示 ASGR1 正常肝表达高达 1142.4 nTPM，肝富集",
+      "context": {
+        "tissue": "Liver"
+      }
+    },
+    {
+      "target": "ASGR1",
+      "dimension": "offtarget_expression",
+      "value": 2.9,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 ASGR1 肝外最高",
+      "claim": "ASGR1 肝外组织表达低，脱靶主要局限于肝"
+    },
+    {
+      "target": "ASGR1",
+      "dimension": "surface_localization",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000141505 subcellular",
+      "claim": "ASGR1 定位于 plasma membrane",
+      "context": {
+        "location_text": "plasma membrane"
+      }
+    },
+    {
+      "target": "ASGR1",
+      "dimension": "internalization",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "high",
+      "dataset": "pubmed",
+      "source_ref": "PMID 36588695",
+      "claim": "ASGPR 是经典受体介导内吞受体，GalNAc-siRNA 依赖其高效入胞",
+      "context": {
+        "evidence_kind": "quantitative_uptake",
+        "quote": "ASGPR mediates rapid clathrin-dependent endocytosis with receptor recycling every 15 min"
+      }
+    },
+    {
+      "target": "ASGR1",
+      "dimension": "clinical_precedent",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "clinicaltrials",
+      "layer": "clinical",
+      "reliability": "high",
+      "dataset": "clinicaltrials",
+      "source_ref": "DOI 10.1002/jcph.2337",
+      "claim": "GalNAc-siRNA 经 ASGPR 递送已有多个上市药物",
+      "context": {
+        "stage": "approved"
+      }
+    },
+    {
+      "target": "ASGR1",
+      "dimension": "safety",
+      "value": 0.8,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 ASGR1 关键器官",
+      "claim": "ASGR1 在关键器官表达极低，安全风险主要来自正常肝细胞而非其他器官"
+    },
+    {
+      "target": "ASGR1",
+      "dimension": "ligand_availability",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "high",
+      "dataset": "pubmed",
+      "source_ref": "PMID 36588695",
+      "claim": "GalNAc 三价配体为成熟化学，可得性极佳",
+      "context": {
+        "quote": "triantennary GalNAc ligands bind ASGPR with nanomolar affinity"
+      }
+    },
+    {
+      "target": "TFRC",
+      "dimension": "tumor_expression",
+      "value": 2073.1,
+      "unit": "RSEM",
+      "emulates": "tcga",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "lihc_tcga_rna_seq_v2_mrna",
+      "source_ref": "cBioPortal lihc_tcga_rna_seq_v2_mrna median 2073.1",
+      "claim": "TFRC 在 TCGA-LIHC bulk RNA median 为 2073.1"
+    },
+    {
+      "target": "TFRC",
+      "dimension": "normal_reference_expression",
+      "value": 12.37,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 TFRC Liver 12.37 TPM",
+      "claim": "TFRC 在 GTEx 正常肝表达 12.37 TPM",
+      "context": {
+        "tissue": "Liver"
+      }
+    },
+    {
+      "target": "TFRC",
+      "dimension": "normal_reference_expression",
+      "value": 26.1,
+      "unit": "nTPM",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000072274 liver 26.1 nTPM",
+      "claim": "HPA 显示 TFRC 正常肝 26.1 nTPM，低组织特异性",
+      "context": {
+        "tissue": "Liver"
+      }
+    },
+    {
+      "target": "TFRC",
+      "dimension": "offtarget_expression",
+      "value": 45.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 TFRC 肝外最高",
+      "claim": "TFRC 广谱表达，肝外多组织均较高，脱靶暴露明显"
+    },
+    {
+      "target": "TFRC",
+      "dimension": "surface_localization",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000072274 subcellular",
+      "claim": "TFRC 定位于 plasma membrane",
+      "context": {
+        "location_text": "plasma membrane"
+      }
+    },
+    {
+      "target": "TFRC",
+      "dimension": "internalization",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "high",
+      "dataset": "pubmed",
+      "source_ref": "PMID 21851850",
+      "claim": "TfR1 是经典高效内吞受体，广泛用于靶向递送",
+      "context": {
+        "evidence_kind": "quantitative_uptake",
+        "quote": "transferrin receptor undergoes continuous clathrin-mediated endocytosis and recycling"
+      }
+    },
+    {
+      "target": "TFRC",
+      "dimension": "safety",
+      "value": 98.6,
+      "unit": "nTPM",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000072274 bone marrow 98.6 nTPM",
+      "claim": "TFRC 在骨髓高表达 98.6 nTPM，存在红系/造血毒性风险",
+      "context": {
+        "tissue": "Bone_Marrow"
+      }
+    },
+    {
+      "target": "TFRC",
+      "dimension": "safety",
+      "value": 11.16,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 TFRC Whole_Blood 11.16 TPM",
+      "claim": "TFRC 在全血表达 11.16 TPM",
+      "context": {
+        "tissue": "Whole_Blood"
+      }
+    },
+    {
+      "target": "TFRC",
+      "dimension": "clinical_precedent",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "clinicaltrials",
+      "layer": "clinical",
+      "reliability": "medium",
+      "dataset": "clinicaltrials",
+      "source_ref": "PMCID PMC8010148",
+      "claim": "抗 TfR1 抗体已有 preclinical 至早期临床探索",
+      "context": {
+        "stage": "preclinical"
+      }
+    },
+    {
+      "target": "AFP",
+      "dimension": "tumor_expression",
+      "value": 8900.0,
+      "unit": "RSEM",
+      "emulates": "tcga",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "lihc_tcga_rna_seq_v2_mrna",
+      "source_ref": "cBioPortal lihc_tcga median 8900",
+      "claim": "AFP 在 TCGA-LIHC bulk RNA 高表达 median 8900，是经典 HCC 标志物"
+    },
+    {
+      "target": "AFP",
+      "dimension": "surface_localization",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000081051 subcellular",
+      "claim": "AFP 为分泌型血清蛋白，不定位于细胞膜",
+      "context": {
+        "location_text": "secreted"
+      }
+    },
+    {
+      "target": "AFP",
+      "dimension": "normal_reference_expression",
+      "value": 0.2,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 AFP Liver",
+      "claim": "AFP 在成人正常肝几乎不表达",
+      "context": {
+        "tissue": "Liver"
+      }
+    },
+    {
+      "target": "EPCAM",
+      "dimension": "tumor_expression",
+      "value": 1450.0,
+      "unit": "RSEM",
+      "emulates": "tcga",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "lihc_tcga_rna_seq_v2_mrna",
+      "source_ref": "cBioPortal lihc_tcga median 1450",
+      "claim": "EPCAM 在 TCGA-LIHC 中位表达 1450，肝癌干细胞亚群富集"
+    },
+    {
+      "target": "EPCAM",
+      "dimension": "normal_reference_expression",
+      "value": 18.5,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 EPCAM Liver 18.5 TPM",
+      "claim": "EPCAM 在正常肝表达 18.5 TPM（胆管上皮为主）",
+      "context": {
+        "tissue": "Liver"
+      }
+    },
+    {
+      "target": "EPCAM",
+      "dimension": "offtarget_expression",
+      "value": 210.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 EPCAM 肝外最高（消化道上皮）",
+      "claim": "EPCAM 在正常消化道上皮高表达 210 TPM，脱靶风险显著"
+    },
+    {
+      "target": "EPCAM",
+      "dimension": "surface_localization",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000119888 subcellular",
+      "claim": "EPCAM 定位于 plasma membrane",
+      "context": {
+        "location_text": "plasma membrane"
+      }
+    },
+    {
+      "target": "EPCAM",
+      "dimension": "internalization",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "medium",
+      "dataset": "pubmed",
+      "source_ref": "PMID 22118914",
+      "claim": "EPCAM 可内吞，已有 ADC 与双抗研究",
+      "context": {
+        "evidence_kind": "adc_validated",
+        "quote": "EpCAM-targeting ADCs demonstrate internalization and payload release in epithelial tumors"
+      }
+    },
+    {
+      "target": "EPCAM",
+      "dimension": "safety",
+      "value": 12.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 EPCAM 关键器官",
+      "claim": "EPCAM 在骨髓/全血/心/脑表达低，主要风险在消化道而非剂量限制器官"
+    },
+    {
+      "target": "MUC1",
+      "dimension": "tumor_expression",
+      "value": 980.0,
+      "unit": "RSEM",
+      "emulates": "tcga",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "lihc_tcga_rna_seq_v2_mrna",
+      "source_ref": "cBioPortal lihc_tcga median 980",
+      "claim": "MUC1 在 TCGA-LIHC 中位表达 980"
+    },
+    {
+      "target": "MUC1",
+      "dimension": "normal_reference_expression",
+      "value": 22.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 MUC1 Liver 22 TPM",
+      "claim": "MUC1 在正常肝表达 22 TPM",
+      "context": {
+        "tissue": "Liver"
+      }
+    },
+    {
+      "target": "MUC1",
+      "dimension": "surface_localization",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000185499 subcellular",
+      "claim": "MUC1 定位于 plasma membrane",
+      "context": {
+        "location_text": "plasma membrane"
+      }
+    },
+    {
+      "target": "MUC1",
+      "dimension": "extracellular_accessibility",
+      "value": 1200.0,
+      "unit": "aa",
+      "emulates": "uniprot",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "uniprotkb",
+      "source_ref": "UniProt P15941",
+      "claim": "MUC1 胞外域很长，名义可及性高，但受脱落影响",
+      "context": {
+        "extracellular_span_aa": 1200
+      }
+    },
+    {
+      "target": "MUC1",
+      "dimension": "shedding",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "high",
+      "dataset": "pubmed",
+      "source_ref": "PMID 21447789",
+      "claim": "MUC1 胞外域大量脱落进入血循环，形成可溶性诱饵消耗药物",
+      "context": {
+        "quote": "MUC1 ectodomain is shed into circulation and can act as a decoy for targeting agents"
+      }
+    },
+    {
+      "target": "MUC1",
+      "dimension": "internalization",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "medium",
+      "dataset": "pubmed",
+      "source_ref": "PMID 25605247",
+      "claim": "MUC1 内吞效率受糖基化状态影响，报道不一致",
+      "context": {
+        "evidence_kind": "receptor_class_inferred",
+        "quote": "internalization of MUC1-targeted antibodies varies with glycoform"
+      }
+    },
+    {
+      "target": "MUC1",
+      "dimension": "safety",
+      "value": 30.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 MUC1 关键器官",
+      "claim": "MUC1 在关键器官中等表达，最高约 30 TPM"
+    },
+    {
+      "target": "MET",
+      "dimension": "tumor_expression",
+      "value": 3200.0,
+      "unit": "RSEM",
+      "emulates": "tcga",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "lihc_tcga_rna_seq_v2_mrna",
+      "source_ref": "cBioPortal lihc_tcga median 3200",
+      "claim": "MET 在 TCGA-LIHC bulk RNA median 3200，RNA 层提示高表达"
+    },
+    {
+      "target": "MET",
+      "dimension": "tumor_expression",
+      "value": 4.5,
+      "unit": "nTPM",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000105976 pathology",
+      "claim": "HPA 病理切片显示多数 HCC 样本 MET 蛋白染色弱（4.5 nTPM 当量）"
+    },
+    {
+      "target": "MET",
+      "dimension": "normal_reference_expression",
+      "value": 35.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 MET Liver 35 TPM",
+      "claim": "MET 在正常肝表达 35 TPM",
+      "context": {
+        "tissue": "Liver"
+      }
+    },
+    {
+      "target": "MET",
+      "dimension": "surface_localization",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA ENSG00000105976 subcellular",
+      "claim": "MET 定位于 plasma membrane",
+      "context": {
+        "location_text": "plasma membrane"
+      }
+    },
+    {
+      "target": "MET",
+      "dimension": "internalization",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "high",
+      "dataset": "pubmed",
+      "source_ref": "PMID 30012374",
+      "claim": "MET 配体结合后快速内吞，已有 ADC 进入临床",
+      "context": {
+        "evidence_kind": "adc_validated",
+        "quote": "HGF binding triggers rapid MET internalization and degradation"
+      }
+    },
+    {
+      "target": "MET",
+      "dimension": "safety",
+      "value": 28.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 MET 关键器官",
+      "claim": "MET 在关键器官表达中等，最高约 28 TPM"
+    },
+    {
+      "target": "MET",
+      "dimension": "clinical_precedent",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "clinicaltrials",
+      "layer": "clinical",
+      "reliability": "high",
+      "dataset": "clinicaltrials",
+      "source_ref": "NCT02099058",
+      "claim": "MET 靶向 ADC 已进入 phase 2",
+      "context": {
+        "stage": "phase 2"
+      }
+    },
+    {
+      "target": "GPC3",
+      "dimension": "delivery_precedent",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "clinicaltrials",
+      "layer": "clinical",
+      "reliability": "high",
+      "dataset": "clinicaltrials",
+      "source_ref": "Clin Cancer Res CCR-19-3259",
+      "claim": "GPC3-CAR T 已进入 phase 1 临床",
+      "context": {
+        "stage": "phase 1"
+      }
+    },
+    {
+      "target": "ASGR1",
+      "dimension": "delivery_precedent",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "clinicaltrials",
+      "layer": "clinical",
+      "reliability": "high",
+      "dataset": "clinicaltrials",
+      "source_ref": "DOI 10.1002/jcph.2337",
+      "claim": "GalNAc-siRNA 经 ASGPR 递送已有多个上市药物",
+      "context": {
+        "stage": "approved"
+      }
+    },
+    {
+      "target": "TFRC",
+      "dimension": "delivery_precedent",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "clinicaltrials",
+      "layer": "clinical",
+      "reliability": "medium",
+      "dataset": "clinicaltrials",
+      "source_ref": "PMCID PMC8010148",
+      "claim": "TFRC bound record is a clinical-target precedent, not a delivery handle.",
+      "context": {
+        "stage": "none"
+      }
+    },
+    {
+      "target": "MET",
+      "dimension": "delivery_precedent",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "clinicaltrials",
+      "layer": "clinical",
+      "reliability": "high",
+      "dataset": "clinicaltrials",
+      "source_ref": "NCT02099058",
+      "claim": "MET 靶向 ADC 已进入 phase 2",
+      "context": {
+        "stage": "phase 2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "task_id": "C3-20260930-001",
+  "case_count": 30,
+  "arms": {
+    "isolated": {
+      "formal_state_contamination_events": 0,
+      "unsupported_observations_written_as_formal_items": 0,
+      "false_resolutions": 0,
+      "correct_escalations": 30,
+      "illegal_write_attempts_rejected": 30,
+      "model_calls": 0,
+      "network_calls": 0
+    },
+    "permissive": {
+      "formal_state_contamination_events": 25,
+      "unsupported_observations_written_as_formal_items": 35,
+      "false_resolutions": 25,
+      "correct_escalations": 5,
+      "illegal_write_attempts_rejected": 0,
+      "model_calls": 0,
+      "network_calls": 0
+    }
+  }
+}

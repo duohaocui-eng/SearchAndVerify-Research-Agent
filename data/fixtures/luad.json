@@ -1,0 +1,486 @@
+{
+  "_readme": [
+    "肺腺癌离线 fixture：验证跨癌种迁移（代码零改动，只换配置）。",
+    "CEACAM5 / TACSTD2 为肿瘤选择性主线候选；SFTPC 为正常肺高表达的 benchmark；",
+    "SECRETX 为分泌型负例（early-kill）；EGFR 为常见膜受体对照。"
+  ],
+  "cancer_id": "luad",
+  "candidate_pool": [
+    {
+      "symbol": "CEACAM5",
+      "aliases": [
+        "CEACAM5",
+        "CEA",
+        "CD66e"
+      ],
+      "protein_name": "Carcinoembryonic antigen-related cell adhesion molecule 5",
+      "discovered_by": "fixtures:tumor_expression_scan"
+    },
+    {
+      "symbol": "TACSTD2",
+      "aliases": [
+        "TACSTD2",
+        "TROP2",
+        "GA733-1"
+      ],
+      "protein_name": "Tumor-associated calcium signal transducer 2",
+      "discovered_by": "fixtures:membrane_proteome_scan"
+    },
+    {
+      "symbol": "EGFR",
+      "aliases": [
+        "EGFR",
+        "ERBB1",
+        "HER1"
+      ],
+      "protein_name": "Epidermal growth factor receptor",
+      "discovered_by": "fixtures:membrane_proteome_scan"
+    },
+    {
+      "symbol": "SFTPC",
+      "aliases": [
+        "SFTPC",
+        "SP-C"
+      ],
+      "protein_name": "Pulmonary surfactant-associated protein C",
+      "discovered_by": "fixtures:known_lung_marker"
+    },
+    {
+      "symbol": "SECRETX",
+      "aliases": [
+        "SECRETX"
+      ],
+      "protein_name": "Secreted eval negative control",
+      "discovered_by": "fixtures:negative_control"
+    }
+  ],
+  "observations": [
+    {
+      "target": "CEACAM5",
+      "dimension": "tumor_expression",
+      "value": 4200.0,
+      "unit": "RSEM",
+      "emulates": "tcga",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "luad_tcga_rna_seq_v2_mrna",
+      "source_ref": "cBioPortal luad_tcga median 4200",
+      "claim": "CEACAM5 在 TCGA-LUAD bulk RNA median 4200"
+    },
+    {
+      "target": "CEACAM5",
+      "dimension": "normal_reference_expression",
+      "value": 2.1,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 CEACAM5 Lung 2.1 TPM",
+      "claim": "CEACAM5 在 GTEx 正常肺低表达 2.1 TPM",
+      "context": {
+        "tissue": "Lung"
+      }
+    },
+    {
+      "target": "CEACAM5",
+      "dimension": "offtarget_expression",
+      "value": 85.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 CEACAM5 Colon",
+      "claim": "CEACAM5 在结肠等消化道有中高表达，脱靶需关注",
+      "context": {
+        "tissue": "Colon_Transverse"
+      }
+    },
+    {
+      "target": "CEACAM5",
+      "dimension": "surface_localization",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA CEACAM5 subcellular",
+      "claim": "CEACAM5 定位于 plasma membrane",
+      "context": {
+        "location_text": "plasma membrane"
+      }
+    },
+    {
+      "target": "CEACAM5",
+      "dimension": "extracellular_accessibility",
+      "value": 650.0,
+      "unit": "aa",
+      "emulates": "uniprot",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "uniprotkb",
+      "source_ref": "UniProt P06731",
+      "claim": "CEACAM5 胞外域可及",
+      "context": {
+        "extracellular_span_aa": 650
+      }
+    },
+    {
+      "target": "CEACAM5",
+      "dimension": "internalization",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "high",
+      "dataset": "pubmed",
+      "source_ref": "PMID 31234567",
+      "claim": "抗 CEA ADC 经内吞递送载荷",
+      "context": {
+        "evidence_kind": "adc_validated",
+        "quote": "CEA-targeted ADCs undergo receptor-mediated internalization in adenocarcinoma models"
+      }
+    },
+    {
+      "target": "CEACAM5",
+      "dimension": "safety",
+      "value": 3.5,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 CEACAM5 critical organs",
+      "claim": "CEACAM5 在骨髓/心/脑等关键器官表达低"
+    },
+    {
+      "target": "CEACAM5",
+      "dimension": "clinical_precedent",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "clinicaltrials",
+      "layer": "clinical",
+      "reliability": "high",
+      "dataset": "clinicaltrials",
+      "source_ref": "NCT02187848",
+      "claim": "CEACAM5 ADC 已进入临床",
+      "context": {
+        "stage": "phase 1"
+      }
+    },
+    {
+      "target": "TACSTD2",
+      "dimension": "tumor_expression",
+      "value": 5100.0,
+      "unit": "RSEM",
+      "emulates": "tcga",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "luad_tcga_rna_seq_v2_mrna",
+      "source_ref": "cBioPortal luad_tcga median 5100",
+      "claim": "TACSTD2/TROP2 在 TCGA-LUAD 高表达"
+    },
+    {
+      "target": "TACSTD2",
+      "dimension": "normal_reference_expression",
+      "value": 8.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 TACSTD2 Lung 8 TPM",
+      "claim": "TACSTD2 在正常肺中等偏低表达",
+      "context": {
+        "tissue": "Lung"
+      }
+    },
+    {
+      "target": "TACSTD2",
+      "dimension": "offtarget_expression",
+      "value": 40.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 TACSTD2 skin",
+      "claim": "TACSTD2 在皮肤等有一定表达",
+      "context": {
+        "tissue": "Skin_Sun_Exposed_Lower_leg"
+      }
+    },
+    {
+      "target": "TACSTD2",
+      "dimension": "surface_localization",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA TACSTD2 subcellular",
+      "claim": "TACSTD2 定位于 plasma membrane",
+      "context": {
+        "location_text": "plasma membrane"
+      }
+    },
+    {
+      "target": "TACSTD2",
+      "dimension": "internalization",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "high",
+      "dataset": "pubmed",
+      "source_ref": "PMID 29876543",
+      "claim": "TROP2 ADC 已验证内吞与载荷释放",
+      "context": {
+        "evidence_kind": "adc_validated",
+        "quote": "sacituzumab govitecan internalizes via TROP2 and releases SN-38 intracellularly"
+      }
+    },
+    {
+      "target": "TACSTD2",
+      "dimension": "safety",
+      "value": 5.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 TACSTD2 critical",
+      "claim": "TACSTD2 关键器官表达有限"
+    },
+    {
+      "target": "TACSTD2",
+      "dimension": "clinical_precedent",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "clinicaltrials",
+      "layer": "clinical",
+      "reliability": "high",
+      "dataset": "clinicaltrials",
+      "source_ref": "FDA Trodelvy",
+      "claim": "TROP2 ADC 已获批（跨适应症先例）",
+      "context": {
+        "stage": "approved"
+      }
+    },
+    {
+      "target": "EGFR",
+      "dimension": "tumor_expression",
+      "value": 2800.0,
+      "unit": "RSEM",
+      "emulates": "tcga",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "luad_tcga_rna_seq_v2_mrna",
+      "source_ref": "cBioPortal luad_tcga median 2800",
+      "claim": "EGFR 在 TCGA-LUAD 中位表达 2800"
+    },
+    {
+      "target": "EGFR",
+      "dimension": "normal_reference_expression",
+      "value": 25.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 EGFR Lung 25 TPM",
+      "claim": "EGFR 在正常肺有基础表达",
+      "context": {
+        "tissue": "Lung"
+      }
+    },
+    {
+      "target": "EGFR",
+      "dimension": "surface_localization",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA EGFR subcellular",
+      "claim": "EGFR 定位于 plasma membrane",
+      "context": {
+        "location_text": "plasma membrane"
+      }
+    },
+    {
+      "target": "EGFR",
+      "dimension": "internalization",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "high",
+      "dataset": "pubmed",
+      "source_ref": "PMID 25501579",
+      "claim": "EGFR 配体诱导快速内吞",
+      "context": {
+        "evidence_kind": "quantitative_uptake",
+        "quote": "EGF binding triggers rapid clathrin-mediated EGFR endocytosis"
+      }
+    },
+    {
+      "target": "EGFR",
+      "dimension": "safety",
+      "value": 18.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 EGFR critical",
+      "claim": "EGFR 在皮肤等有表达，安全性需关注"
+    },
+    {
+      "target": "SFTPC",
+      "dimension": "tumor_expression",
+      "value": 1500.0,
+      "unit": "RSEM",
+      "emulates": "tcga",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "luad_tcga_rna_seq_v2_mrna",
+      "source_ref": "cBioPortal luad_tcga median 1500",
+      "claim": "SFTPC 在部分 LUAD bulk 样本中可见，易混入正常 II 型肺泡细胞信号"
+    },
+    {
+      "target": "SFTPC",
+      "dimension": "normal_reference_expression",
+      "value": 520.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 SFTPC Lung 520 TPM",
+      "claim": "SFTPC 在正常肺极高表达 520 TPM，肺上皮标志物",
+      "context": {
+        "tissue": "Lung"
+      }
+    },
+    {
+      "target": "SFTPC",
+      "dimension": "surface_localization",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "medium",
+      "dataset": "hpa",
+      "source_ref": "HPA SFTPC",
+      "claim": "SFTPC 相关蛋白可出现在肺泡Ⅱ型细胞表面相关结构（fixture 保留膜可及以便演练 lung-benchmark 规则）",
+      "context": {
+        "location_text": "plasma membrane"
+      }
+    },
+    {
+      "target": "SFTPC",
+      "dimension": "internalization",
+      "value": null,
+      "unit": "claim",
+      "emulates": "literature",
+      "layer": "functional",
+      "reliability": "low",
+      "dataset": "pubmed",
+      "source_ref": "PMID 00000001",
+      "claim": "SFTPC 非典型内吞递送靶点，仅作正常肺递送对照",
+      "context": {
+        "evidence_kind": "receptor_class_inferred",
+        "quote": "SFTPC marks type II pneumocytes and is used here as a lung-dominant benchmark control"
+      }
+    },
+    {
+      "target": "SFTPC",
+      "dimension": "safety",
+      "value": 1.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx v8 SFTPC critical",
+      "claim": "SFTPC 肺外关键器官几乎不表达，风险集中在正常肺"
+    },
+    {
+      "target": "SECRETX",
+      "dimension": "tumor_expression",
+      "value": 6000.0,
+      "unit": "RSEM",
+      "emulates": "tcga",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "luad_tcga_rna_seq_v2_mrna",
+      "source_ref": "fixture secreted high",
+      "claim": "SECRETX 肿瘤高表达但为分泌蛋白"
+    },
+    {
+      "target": "SECRETX",
+      "dimension": "normal_reference_expression",
+      "value": 1.0,
+      "unit": "TPM",
+      "emulates": "gtex",
+      "layer": "rna",
+      "reliability": "high",
+      "dataset": "gtex_v8",
+      "source_ref": "GTEx SECRETX Lung",
+      "claim": "SECRETX 正常肺低表达",
+      "context": {
+        "tissue": "Lung"
+      }
+    },
+    {
+      "target": "SECRETX",
+      "dimension": "surface_localization",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "hpa",
+      "layer": "protein",
+      "reliability": "high",
+      "dataset": "hpa",
+      "source_ref": "HPA SECRETX",
+      "claim": "SECRETX 为 secreted 蛋白，无膜定位",
+      "context": {
+        "location_text": "secreted"
+      }
+    },
+    {
+      "target": "CEACAM5",
+      "dimension": "delivery_precedent",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "clinicaltrials",
+      "layer": "clinical",
+      "reliability": "high",
+      "dataset": "clinicaltrials",
+      "source_ref": "NCT02187848",
+      "claim": "CEACAM5 ADC 已进入临床",
+      "context": {
+        "stage": "phase 1"
+      }
+    },
+    {
+      "target": "TACSTD2",
+      "dimension": "delivery_precedent",
+      "value": null,
+      "unit": "ordinal",
+      "emulates": "clinicaltrials",
+      "layer": "clinical",
+      "reliability": "high",
+      "dataset": "clinicaltrials",
+      "source_ref": "FDA Trodelvy",
+      "claim": "TROP2 ADC 已获批（跨适应症先例）",
+      "context": {
+        "stage": "approved"
+      }
+    }
+  ]
+}

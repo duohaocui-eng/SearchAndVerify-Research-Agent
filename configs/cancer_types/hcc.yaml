@@ -1,0 +1,58 @@
+# 癌种配置：肝细胞癌 HCC
+#
+# HCC 是本项目的「金标准癌种」：已有 hcc_target-evidence-model 的人工结论作为已知答案，
+# 通用管线必须能在 HCC 上复现这些结论，才算通用化没有做偏。
+# 详见 docs/06_评测与消融方案.md「HCC 回归校验」。
+
+cancer_id: hcc
+cancer_type_short: HCC
+cancer_type_full: Hepatocellular Carcinoma (肝细胞癌)
+
+reference_normal_tissue: Liver
+reference_normal_tissue_label: 正常肝
+
+critical_risk_tissues:
+  - Whole_Blood
+  - Bone_Marrow             # GTEx v8 没有骨髓样本，会被 GtexSource 自动跳过（记入 skipped_tissues），
+                             # 不算取数失败；HPA 的 "bone marrow" 蛋白表达数据可作为该组织的替代来源。
+  - Heart_Left_Ventricle
+  - Brain_Cortex
+
+# 留空 = 扫描全部可得组织（GTEx v8 共 54 个）取最高值，最彻底但对接真实 API 时
+# 单个候选单这一个维度就要发 54 次请求，真实网络延迟下会很慢（分钟级/候选）。
+# 这里改成显式列出一批递送靶点文献里常见的脱靶高风险组织：兼顾覆盖面与真实调用成本。
+# 需要更彻底的扫描（比如怀疑某个候选在冷门组织有高表达）时改回 [] 即可，代码不用动。
+offtarget_scan_tissues:
+  - Spleen
+  - Lung
+  - Kidney_Cortex
+  - Pancreas
+  - Skin_Sun_Exposed_Lower_leg
+  - Small_Intestine_Terminal_Ileum
+  - Colon_Transverse
+  - Stomach
+
+sources:
+  cbioportal:
+    study_id: lihc_tcga
+    molecular_profile_id: lihc_tcga_rna_seq_v2_mrna
+    sample_list_id: lihc_tcga_rna_seq_v2_mrna
+  tcga:
+    project_id: TCGA-LIHC
+  depmap:
+    lineage: Liver
+    oncotree_code: HCC
+  literature:
+    query_terms:
+      - hepatocellular carcinoma
+      - HCC
+      - liver cancer
+
+# 来自既有 HCC 模型的已知答案，仅用于回归校验，不参与评分
+expected_order: [GPC3, ASGPR, TFRC]
+benchmark_targets: [ASGPR]
+
+candidate_generation:
+  max_candidates: 40
+  shortlist_size: 8
+  require_membrane: true

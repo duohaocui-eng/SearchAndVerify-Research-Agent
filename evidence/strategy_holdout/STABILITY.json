@@ -1,0 +1,242 @@
+[
+  {
+    "case_id": "HOLDOUT-01-HER2-BIPARATOPIC",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.2857142857142857,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-01-HER2-BIPARATOPIC",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.42857142857142855,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-02-PSMA-LIPOSOMES",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.5,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-02-PSMA-LIPOSOMES",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.42857142857142855,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-03-FOLR1-DUAL-PDC",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.75,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-03-FOLR1-DUAL-PDC",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 1.0,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-04-MSLN-FUSION-TOXIN",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.6666666666666666,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-04-MSLN-FUSION-TOXIN",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.14285714285714285,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-05-EGFR-PHOTOACTIVATION",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.75,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-05-EGFR-PHOTOACTIVATION",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.6,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-06-CD71-POLYMER-NP",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 1.0,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-06-CD71-POLYMER-NP",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.125,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-07-CD44-ENDOSOMAL-ESCAPE",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.3333333333333333,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-07-CD44-ENDOSOMAL-ESCAPE",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.3333333333333333,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-08-EPCAM-RADIOANTIBODY",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.25,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-08-EPCAM-RADIOANTIBODY",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.5,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-09-CAIX-THERANOSTIC",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 1.0,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-09-CAIX-THERANOSTIC",
+    "profile": "stepwise",
+    "record_jaccard": 0.0,
+    "passage_jaccard": 0.0,
+    "same_gold_outcome": false,
+    "same_completion": false
+  },
+  {
+    "case_id": "HOLDOUT-10-PDL1-SURFACE-DYNAMICS",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.6666666666666666,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-10-PDL1-SURFACE-DYNAMICS",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.6666666666666666,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-11-ROR1-ADC",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.6666666666666666,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-11-ROR1-ADC",
+    "profile": "stepwise",
+    "record_jaccard": 0.0,
+    "passage_jaccard": 0.0,
+    "same_gold_outcome": false,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-12-NECTIN4-CRB701",
+    "profile": "compact",
+    "record_jaccard": 0.0,
+    "passage_jaccard": 0.0,
+    "same_gold_outcome": false,
+    "same_completion": false
+  },
+  {
+    "case_id": "HOLDOUT-12-NECTIN4-CRB701",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.5,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-13-TROP2-TRTAC",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 1.0,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-13-TROP2-TRTAC",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 0.6666666666666666,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-14-CLDN18-SOT102",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 1.0,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-14-CLDN18-SOT102",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 1.0,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-15-B7H3-ADC",
+    "profile": "compact",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 1.0,
+    "same_gold_outcome": true,
+    "same_completion": true
+  },
+  {
+    "case_id": "HOLDOUT-15-B7H3-ADC",
+    "profile": "stepwise",
+    "record_jaccard": 1.0,
+    "passage_jaccard": 1.0,
+    "same_gold_outcome": true,
+    "same_completion": true
+  }
+]

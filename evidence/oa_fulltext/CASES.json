@@ -1,0 +1,776 @@
+{
+  "task_id": "C3-20260930-001",
+  "frozen_before_evaluation": true,
+  "scope": "within-document localization conditional on a bound public OA source; not search recall or medical truth",
+  "selection": "deterministic method-term screen; max two body cases per document; no evaluator rank used during selection",
+  "counts": {
+    "fulltext_primary": 18,
+    "abstract_sufficient": 10,
+    "no_support_control": 6,
+    "fulltext_unavailable_control": 4
+  },
+  "cases": [
+    {
+      "case_id": "A-FT-001",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:39051531"
+      ],
+      "pmcids": [
+        "PMC11275528"
+      ],
+      "query": "lysosomal colocalization pulse chase antibody",
+      "gold_passage_ids": [
+        "MED:39051531:257b5acf139d:p23"
+      ],
+      "gold_document_sha256": [
+        "257b5acf139d11baf1256623ded8a605e611b7c18c2405dd18e22937fa6550db"
+      ],
+      "gold_section": "Results / Pulsed anti-ASGR1 antibodies localize to endo-lysosomal compartments and decrease ASGR1 levels",
+      "gold_quote": "localization of intracellular CAR-WT antibody in FcRn+ endosomes, cellular FcRn levels were quantified by a flow-based assay and mass-spectrometry to",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC11275528"
+    },
+    {
+      "case_id": "A-FT-002",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:40486834"
+      ],
+      "pmcids": [
+        "PMC12138107"
+      ],
+      "query": "internalization uptake endocytosis lysosome lysosomal",
+      "gold_passage_ids": [
+        "MED:40486834:6b76592cd653:p8"
+      ],
+      "gold_document_sha256": [
+        "6b76592cd65369f1b47ffbff0ce195239521d2780464280bb65819f8847c486b"
+      ],
+      "gold_section": "Results and discussion / Validation of GPC3-mediated endocytosis and lysosomal trafficking",
+      "gold_quote": "GPC3-mediated endocytosis and lysosomal trafficking using a probe conjugating GPC3-targeting peptide with photosensitizer. (A) Schematic diagram of the internalization of",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC12138107"
+    },
+    {
+      "case_id": "A-FT-003",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:40486834"
+      ],
+      "pmcids": [
+        "PMC12138107"
+      ],
+      "query": "microscopy fluorescence antibody flow cytometry",
+      "gold_passage_ids": [
+        "MED:40486834:6b76592cd653:p12"
+      ],
+      "gold_document_sha256": [
+        "6b76592cd65369f1b47ffbff0ce195239521d2780464280bb65819f8847c486b"
+      ],
+      "gold_section": "Results and discussion / Degradation of PD-L1  via  GLTACs",
+      "gold_quote": "cells was confirmed by flow cytometry assay (Supporting Information Fig. S2). PD-L1 degradation was observed in all tested compounds at",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC12138107"
+    },
+    {
+      "case_id": "A-FT-004",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:42604028"
+      ],
+      "pmcids": [
+        "PMC13476555"
+      ],
+      "query": "fluorescence fluorescent antibody flow cytometry",
+      "gold_passage_ids": [
+        "MED:42604028:4058420f3778:p55"
+      ],
+      "gold_document_sha256": [
+        "4058420f3778d8d923fbfdde1d7f07c4cca3bee1295898299ddf37b6a118fbe7"
+      ],
+      "gold_section": "Results / In vitro targeting analysis of the mTriangle-AP613-1-liposomes",
+      "gold_quote": "we conducted in vitro flow cytometry and cellular immunofluorescence techniques. Initially, we validated the expression of GPC3 in three cells",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC13476555"
+    },
+    {
+      "case_id": "A-FT-005",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:41133972"
+      ],
+      "pmcids": [
+        "PMC12562797"
+      ],
+      "query": "internalization endocytosis endocytic lysosomal microscopy",
+      "gold_passage_ids": [
+        "MED:41133972:aa9cf6abd44f:p32"
+      ],
+      "gold_document_sha256": [
+        "aa9cf6abd44f6b4d2361e9d49bbd268c9d00e67003b71115d79ff2255cbf49f7"
+      ],
+      "gold_section": "Discussion",
+      "gold_quote": "(pH 5–6).18 Upon antibody-mediated endocytosis, the probe is transported to acidic compartments (endosomes/lysosomes),19 where fluorescence intensity – proportional to internalization",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC12562797"
+    },
+    {
+      "case_id": "A-FT-006",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:39051531"
+      ],
+      "pmcids": [
+        "PMC11275528"
+      ],
+      "query": "internalization uptake colocalization microscopy fluorescence",
+      "gold_passage_ids": [
+        "MED:39051531:257b5acf139d:p18"
+      ],
+      "gold_document_sha256": [
+        "257b5acf139d11baf1256623ded8a605e611b7c18c2405dd18e22937fa6550db"
+      ],
+      "gold_section": "Results / Pulsed anti-ASGR1 antibodies localize to endo-lysosomal compartments and decrease ASGR1 levels",
+      "gold_quote": "antibodies, we conducted cellular uptake and localization studies by fluorescence microscopy. Undesirable auto-fluorescence from primary hepatocytes of mouse and human",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC11275528"
+    },
+    {
+      "case_id": "A-FT-007",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:42302184"
+      ],
+      "pmcids": [
+        "PMC13366411"
+      ],
+      "query": "internalization fluorescence fluorescent antibody cytometry",
+      "gold_passage_ids": [
+        "MED:42302184:92b120d94afe:p18"
+      ],
+      "gold_document_sha256": [
+        "92b120d94afe38d767c2216a260ae1c094206353baef84e46167744f6921aae6"
+      ],
+      "gold_section": "Materials and Methods / Antibody internalization study",
+      "gold_quote": "used to assess GPC3-mediated antibody internalization. A pH-sensitive fluorescent dye, Incucyte Fabfluor-pH (Sartorius), was used for labeling. This dye exhibits",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC13366411"
+    },
+    {
+      "case_id": "A-FT-008",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:41783645"
+      ],
+      "pmcids": [
+        "PMC12955658"
+      ],
+      "query": "uptake microscopy fluorescence fluorescent assay",
+      "gold_passage_ids": [
+        "MED:41783645:7732286062dc:p30"
+      ],
+      "gold_document_sha256": [
+        "7732286062dc6c71a47af108bf07490271d2bdc23875fca55c7485e1782755f7"
+      ],
+      "gold_section": "Results / Synthesis and in vitro targeting validation of dual-targeted OMVs",
+      "gold_quote": "confirm that the enhanced uptake was specifically mediated by peptide-receptor interaction, we performed a competition assay. Pre-incubation of Huh-7 cells",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC12955658"
+    },
+    {
+      "case_id": "A-FT-009",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:41783645"
+      ],
+      "pmcids": [
+        "PMC12955658"
+      ],
+      "query": "uptake fluorescence flow cytometry incubated",
+      "gold_passage_ids": [
+        "MED:41783645:7732286062dc:p27"
+      ],
+      "gold_document_sha256": [
+        "7732286062dc6c71a47af108bf07490271d2bdc23875fca55c7485e1782755f7"
+      ],
+      "gold_section": "Results / Synthesis and in vitro targeting validation of dual-targeted OMVs",
+      "gold_quote": "optimal conjugation efficiency, we incubated SpC-OMVs (500 μg/mL) with varying concentrations of the peptides (GPC3T-SpT conjugated to Rhodamine B and",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC12955658"
+    },
+    {
+      "case_id": "A-FT-010",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:39791910"
+      ],
+      "pmcids": [
+        "PMC11852847"
+      ],
+      "query": "antibody flow cytometry assay binding",
+      "gold_passage_ids": [
+        "MED:39791910:abdc865a90bd:p7"
+      ],
+      "gold_document_sha256": [
+        "abdc865a90bd52e7fe9eb33a01e67fdccfbdfbc7cd28ea7a5bc6bb3952d01237"
+      ],
+      "gold_section": "RESULTS / ACE2 independence of mutant E484D is associated with imdevimab and bebtelovimab resistance",
+      "gold_quote": "plates, incubated with ACE2 antibody (10108-MM36, Sino Biological) for 30 min and inoculated with pseudotypes bearing the indicated viral glycoproteins.",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC11852847"
+    },
+    {
+      "case_id": "A-FT-011",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:42302184"
+      ],
+      "pmcids": [
+        "PMC13366411"
+      ],
+      "query": "fluorescence fluorescent assay control incubated",
+      "gold_passage_ids": [
+        "MED:42302184:92b120d94afe:p17"
+      ],
+      "gold_document_sha256": [
+        "92b120d94afe38d767c2216a260ae1c094206353baef84e46167744f6921aae6"
+      ],
+      "gold_section": "Materials and Methods / In vitro  cell killing and bystander effect assay",
+      "gold_quote": "For the bystander effect assay, GPC3− A375 cells stably transfected with green fluorescent protein (GFP) were used as an indicator",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC13366411"
+    },
+    {
+      "case_id": "A-FT-012",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:29069408"
+      ],
+      "pmcids": [
+        "PMC5716100"
+      ],
+      "query": "internalization fluorescence flow cytometry control",
+      "gold_passage_ids": [
+        "MED:29069408:1a908318856f:p16"
+      ],
+      "gold_document_sha256": [
+        "1a908318856f60e15ee7632fe8835306070737c8509703503aee333f19d55e16"
+      ],
+      "gold_section": "MATERIALS AND METHODS / Measurement of ASO uptake by flow cytometry",
+      "gold_quote": "For flow cytometry experiments cells were seeded in 24-well plates (∼150 000 cells/well) and allowed to attach and equilibrate for",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC5716100"
+    },
+    {
+      "case_id": "A-FT-013",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:39791910"
+      ],
+      "pmcids": [
+        "PMC11852847"
+      ],
+      "query": "antibody flow cytometry binding control",
+      "gold_passage_ids": [
+        "MED:39791910:abdc865a90bd:p11"
+      ],
+      "gold_document_sha256": [
+        "abdc865a90bd52e7fe9eb33a01e67fdccfbdfbc7cd28ea7a5bc6bb3952d01237"
+      ],
+      "gold_section": "RESULTS / Coexpression of ASGR1 or DC-SIGN with TMEM106B promotes entry of mutant E484D",
+      "gold_quote": "by immunoblot using anti-Fc antibody. The results of a representative experiment are shown and were confirmed in two additional experiments.",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC11852847"
+    },
+    {
+      "case_id": "A-FT-014",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:34508778"
+      ],
+      "pmcids": [
+        "PMC8479480"
+      ],
+      "query": "fluorescence fluorescent antibody surface incubated",
+      "gold_passage_ids": [
+        "MED:34508778:2024d1cd237e:p36"
+      ],
+      "gold_document_sha256": [
+        "2024d1cd237e5c682dce2a4c5131db2127c3d6c169df92c872ee11e52f70f734"
+      ],
+      "gold_section": "Experimental procedures / Immunofluorescence",
+      "gold_quote": "For immunofluorescence experiments, HEK293, HepG2, or HepG2-PCSK9-KO cells (0.5 × 105 cells/well) were plated on poly-L-lysine–coated round microscope coverslips that",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC8479480"
+    },
+    {
+      "case_id": "A-FT-015",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:34508778"
+      ],
+      "pmcids": [
+        "PMC8479480"
+      ],
+      "query": "colocalization microscopy surface incubated cells",
+      "gold_passage_ids": [
+        "MED:34508778:2024d1cd237e:p6"
+      ],
+      "gold_document_sha256": [
+        "2024d1cd237e5c682dce2a4c5131db2127c3d6c169df92c872ee11e52f70f734"
+      ],
+      "gold_section": "Results / PCSK9 reduces LDLR but not ASGR1 levels",
+      "gold_quote": "endogenous ASGR1 in HepG2-PCSK9-KO cells confirmed its presence at the plasma membrane and revealed its colocalization with the LDLR (−PCSK9;",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC8479480"
+    },
+    {
+      "case_id": "A-FT-016",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:37048069"
+      ],
+      "pmcids": [
+        "PMC10093649"
+      ],
+      "query": "antibody flow cytometry binding incubated",
+      "gold_passage_ids": [
+        "MED:37048069:59032044de2f:p10"
+      ],
+      "gold_document_sha256": [
+        "59032044de2f2f5a843ff50074144e026fd3376c9615ef754afec31046591536"
+      ],
+      "gold_section": "2. Materials and Methods / 2.6. Anti-NKp46 mAb and hNKp46-Ig Binding Studies on NKp46 Expressing Cells and Human Tumor Cell Lines, Respectively",
+      "gold_quote": "mAbs 09 and 9E2 binding to PBNK cells or BW NKp46 transfectants or parental BW cells incubated at 4 °C",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC10093649"
+    },
+    {
+      "case_id": "A-FT-017",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:41133972"
+      ],
+      "pmcids": [
+        "PMC12562797"
+      ],
+      "query": "internalization fluorescence antibody flow cytometry",
+      "gold_passage_ids": [
+        "MED:41133972:aa9cf6abd44f:p21"
+      ],
+      "gold_document_sha256": [
+        "aa9cf6abd44f6b4d2361e9d49bbd268c9d00e67003b71115d79ff2255cbf49f7"
+      ],
+      "gold_section": "Results / Application of 3C-pHAb in quantifying antibody internalization",
+      "gold_quote": "for quantitative detection of antibody internalization. (a) Time-dependent fluorescence curves of SKBR3 incubated with Trastuzumab +3C-pHAb. (b) Representative fluorescence images",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC12562797"
+    },
+    {
+      "case_id": "A-FT-018",
+      "category": "fulltext_primary",
+      "record_ids": [
+        "MED:42738352"
+      ],
+      "pmcids": [
+        "PMC13564738"
+      ],
+      "query": "internalization uptake endocytosis lysosomal surface",
+      "gold_passage_ids": [
+        "MED:42738352:761cfe575f05:p58"
+      ],
+      "gold_document_sha256": [
+        "761cfe575f050452bacbd6e2e5961903d31cc76a78136704c49eb94789ed7529"
+      ],
+      "gold_section": "3. Proteoglycans in Receptor Internalization and Intracellular Trafficking / 3.1. Receptor Internalization and Endocytic-Route Selection / 3.1.1. Clathrin-Mediated Endocytosis",
+      "gold_quote": "studied mechanism is clathrin-mediated endocytosis (CME), which is used by most eukaryotic cells. CME facilitates the uptake of antibodies, hormones,",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC13564738"
+    },
+    {
+      "case_id": "A-AB-001",
+      "category": "abstract_sufficient",
+      "record_ids": [
+        "MED:37048069"
+      ],
+      "pmcids": [
+        "PMC10093649"
+      ],
+      "query": "internalization antibody binding cells cellular",
+      "gold_passage_ids": [
+        "MED:37048069:abstract"
+      ],
+      "gold_document_sha256": [
+        "59032044de2f2f5a843ff50074144e026fd3376c9615ef754afec31046591536"
+      ],
+      "gold_section": "Abstract",
+      "gold_quote": "solid tumors, including hepatocellular carcinoma, and is barely expressed in adult normal tissues except the placenta. NKp46 activation receptor is",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC10093649"
+    },
+    {
+      "case_id": "A-AB-002",
+      "category": "abstract_sufficient",
+      "record_ids": [
+        "MED:39051531"
+      ],
+      "pmcids": [
+        "PMC11275528"
+      ],
+      "query": "microscopy fluorescence antibody ph recycling",
+      "gold_passage_ids": [
+        "MED:39051531:abstract"
+      ],
+      "gold_document_sha256": [
+        "257b5acf139d11baf1256623ded8a605e611b7c18c2405dd18e22937fa6550db"
+      ],
+      "gold_section": "Abstract",
+      "gold_quote": "antigens with antibodies exhibiting pH/Ca2+-dependent binding against an antigen is an attractive strategy to mitigate target-mediated disposition and antigen buffering.",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC11275528"
+    },
+    {
+      "case_id": "A-AB-003",
+      "category": "abstract_sufficient",
+      "record_ids": [
+        "MED:39791910"
+      ],
+      "pmcids": [
+        "PMC11852847"
+      ],
+      "query": "antibody cells cellular",
+      "gold_passage_ids": [
+        "MED:39791910:abstract"
+      ],
+      "gold_document_sha256": [
+        "abdc865a90bd52e7fe9eb33a01e67fdccfbdfbc7cd28ea7a5bc6bb3952d01237"
+      ],
+      "gold_section": "Abstract",
+      "gold_quote": "we investigated whether the cellular proteins ASGR1, DC-SIGN, and TMEM106B, which interact with the viral S protein, can contribute to",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC11852847"
+    },
+    {
+      "case_id": "A-AB-004",
+      "category": "abstract_sufficient",
+      "record_ids": [
+        "MED:40429734"
+      ],
+      "pmcids": [
+        "PMC12111582"
+      ],
+      "query": "screening promising development",
+      "gold_passage_ids": [
+        "MED:40429734:abstract"
+      ],
+      "gold_document_sha256": [
+        "ea9a28b3dadd86700611f08e33403063c3385a821508fe6ef9d50e633a725fad"
+      ],
+      "gold_section": "Abstract",
+      "gold_quote": "(ASGR1) represents a highly promising target for drug development, with its expression regulation closely linked to various diseases. Consequently, research",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC12111582"
+    },
+    {
+      "case_id": "A-AB-005",
+      "category": "abstract_sufficient",
+      "record_ids": [
+        "MED:40486834"
+      ],
+      "pmcids": [
+        "PMC12138107"
+      ],
+      "query": "endocytosis lysosome lysosomal cells",
+      "gold_passage_ids": [
+        "MED:40486834:abstract"
+      ],
+      "gold_document_sha256": [
+        "6b76592cd65369f1b47ffbff0ce195239521d2780464280bb65819f8847c486b"
+      ],
+      "gold_section": "Abstract",
+      "gold_quote": "we developed glypican-3 (GPC3)-mediated lysosome-targeting chimeras (GLTACs) as a novel strategy for the targeted degradation of tumor-specific membrane proteins. GLTACs",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC12138107"
+    },
+    {
+      "case_id": "A-AB-006",
+      "category": "abstract_sufficient",
+      "record_ids": [
+        "MED:40852369"
+      ],
+      "pmcids": [
+        "PMC12367805"
+      ],
+      "query": "endocytosis glycoproteins important",
+      "gold_passage_ids": [
+        "MED:40852369:abstract"
+      ],
+      "gold_document_sha256": [
+        "cbf5440ff5d0dd99de4eef6f88474b7ce98eb9cf8de19b954836e1c6c107227f"
+      ],
+      "gold_section": "Abstract",
+      "gold_quote": "chains, and desialylation of glycoproteins is considered an important biological signal. In the liver and other cell types, asialoglycoprotein receptor",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC12367805"
+    },
+    {
+      "case_id": "A-AB-007",
+      "category": "abstract_sufficient",
+      "record_ids": [
+        "MED:41133972"
+      ],
+      "pmcids": [
+        "PMC12562797"
+      ],
+      "query": "internalization fluorescent antibody assay ph",
+      "gold_passage_ids": [
+        "MED:41133972:abstract"
+      ],
+      "gold_document_sha256": [
+        "aa9cf6abd44f6b4d2361e9d49bbd268c9d00e67003b71115d79ff2255cbf49f7"
+      ],
+      "gold_section": "Abstract",
+      "gold_quote": "ABSTRACTAntibody-drug conjugates (ADCs) rely on antibody-mediated internalization to deliver cytotoxic payloads into tumor cells. Therefore, quantitative assessment of antibody internalization",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC12562797"
+    },
+    {
+      "case_id": "A-AB-008",
+      "category": "abstract_sufficient",
+      "record_ids": [
+        "MED:41783645"
+      ],
+      "pmcids": [
+        "PMC12955658"
+      ],
+      "query": "internalization ph binding cells",
+      "gold_passage_ids": [
+        "MED:41783645:abstract"
+      ],
+      "gold_document_sha256": [
+        "7732286062dc6c71a47af108bf07490271d2bdc23875fca55c7485e1782755f7"
+      ],
+      "gold_section": "Abstract",
+      "gold_quote": "have limitations like nonspecific phagocytosis and weak targeting. In this study, a dual-targeted nanosystem ((GPC3 + CD133)T-OMVs@DOX) was developed using",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC12955658"
+    },
+    {
+      "case_id": "A-AB-009",
+      "category": "abstract_sufficient",
+      "record_ids": [
+        "MED:41949334"
+      ],
+      "pmcids": [
+        "PMC13059674"
+      ],
+      "query": "uptake labeled silencing",
+      "gold_passage_ids": [
+        "MED:41949334:abstract"
+      ],
+      "gold_document_sha256": [
+        "d1dda9032fbd6765154689c034c291f26f9aaf16d5b71f7304e598f98104aabe"
+      ],
+      "gold_section": "Abstract",
+      "gold_quote": "captures the process of uptake, potency, and durability for early in vitro screening. These liver spheroids remain viable in culture",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC13059674"
+    },
+    {
+      "case_id": "A-AB-010",
+      "category": "abstract_sufficient",
+      "record_ids": [
+        "MED:41841173"
+      ],
+      "pmcids": [
+        "PMC13097540"
+      ],
+      "query": "flow cytometry control",
+      "gold_passage_ids": [
+        "MED:41841173:abstract"
+      ],
+      "gold_document_sha256": [
+        "27b93e0e4455197d4a1f1101d01ae8ad3edaafab12ef9beeee2a4304b3cb4f3d"
+      ],
+      "gold_section": "Abstract",
+      "gold_quote": "significant biomarker potential.Using high‐resolution flow cytometry, we compared levels of liver‐derived (ASGR1+‐EVs) and CD36+‐expressing EVs (CD36+‐EV) in individuals with obesity",
+      "expected": "supported",
+      "source_url": "https://europepmc.org/articles/PMC13097540"
+    },
+    {
+      "case_id": "A-NS-001",
+      "category": "no_support_control",
+      "record_ids": [
+        "MED:37048069"
+      ],
+      "pmcids": [
+        "PMC10093649"
+      ],
+      "query": "quantum zebrafish telemetry calibration",
+      "gold_passage_ids": [],
+      "gold_document_sha256": [
+        "59032044de2f2f5a843ff50074144e026fd3376c9615ef754afec31046591536"
+      ],
+      "gold_section": null,
+      "gold_quote": null,
+      "expected": "unknown",
+      "source_url": "https://europepmc.org/articles/PMC10093649"
+    },
+    {
+      "case_id": "A-NS-002",
+      "category": "no_support_control",
+      "record_ids": [
+        "MED:39051531"
+      ],
+      "pmcids": [
+        "PMC11275528"
+      ],
+      "query": "lunar regolith isotope navigation",
+      "gold_passage_ids": [],
+      "gold_document_sha256": [
+        "257b5acf139d11baf1256623ded8a605e611b7c18c2405dd18e22937fa6550db"
+      ],
+      "gold_section": null,
+      "gold_quote": null,
+      "expected": "unknown",
+      "source_url": "https://europepmc.org/articles/PMC11275528"
+    },
+    {
+      "case_id": "A-NS-003",
+      "category": "no_support_control",
+      "record_ids": [
+        "MED:39791910"
+      ],
+      "pmcids": [
+        "PMC11852847"
+      ],
+      "query": "volcanic acoustic sensor benchmark",
+      "gold_passage_ids": [],
+      "gold_document_sha256": [
+        "abdc865a90bd52e7fe9eb33a01e67fdccfbdfbc7cd28ea7a5bc6bb3952d01237"
+      ],
+      "gold_section": null,
+      "gold_quote": null,
+      "expected": "unknown",
+      "source_url": "https://europepmc.org/articles/PMC11852847"
+    },
+    {
+      "case_id": "A-NS-004",
+      "category": "no_support_control",
+      "record_ids": [
+        "MED:40429734"
+      ],
+      "pmcids": [
+        "PMC12111582"
+      ],
+      "query": "marine salinity turbine controller",
+      "gold_passage_ids": [],
+      "gold_document_sha256": [
+        "ea9a28b3dadd86700611f08e33403063c3385a821508fe6ef9d50e633a725fad"
+      ],
+      "gold_section": null,
+      "gold_quote": null,
+      "expected": "unknown",
+      "source_url": "https://europepmc.org/articles/PMC12111582"
+    },
+    {
+      "case_id": "A-NS-005",
+      "category": "no_support_control",
+      "record_ids": [
+        "MED:40486834"
+      ],
+      "pmcids": [
+        "PMC12138107"
+      ],
+      "query": "satellite orchard irrigation protocol",
+      "gold_passage_ids": [],
+      "gold_document_sha256": [
+        "6b76592cd65369f1b47ffbff0ce195239521d2780464280bb65819f8847c486b"
+      ],
+      "gold_section": null,
+      "gold_quote": null,
+      "expected": "unknown",
+      "source_url": "https://europepmc.org/articles/PMC12138107"
+    },
+    {
+      "case_id": "A-NS-006",
+      "category": "no_support_control",
+      "record_ids": [
+        "MED:40852369"
+      ],
+      "pmcids": [
+        "PMC12367805"
+      ],
+      "query": "geothermal ceramic fatigue assay",
+      "gold_passage_ids": [],
+      "gold_document_sha256": [
+        "cbf5440ff5d0dd99de4eef6f88474b7ce98eb9cf8de19b954836e1c6c107227f"
+      ],
+      "gold_section": null,
+      "gold_quote": null,
+      "expected": "unknown",
+      "source_url": "https://europepmc.org/articles/PMC12367805"
+    },
+    {
+      "case_id": "A-UA-001",
+      "category": "fulltext_unavailable_control",
+      "record_ids": [
+        "MED:UNAVAILABLE1"
+      ],
+      "pmcids": [],
+      "query": "internalization assay control",
+      "gold_passage_ids": [],
+      "gold_document_sha256": [],
+      "gold_section": null,
+      "gold_quote": null,
+      "expected": "unknown",
+      "source_url": null
+    },
+    {
+      "case_id": "A-UA-002",
+      "category": "fulltext_unavailable_control",
+      "record_ids": [
+        "MED:UNAVAILABLE2"
+      ],
+      "pmcids": [],
+      "query": "internalization assay control",
+      "gold_passage_ids": [],
+      "gold_document_sha256": [],
+      "gold_section": null,
+      "gold_quote": null,
+      "expected": "unknown",
+      "source_url": null
+    },
+    {
+      "case_id": "A-UA-003",
+      "category": "fulltext_unavailable_control",
+      "record_ids": [
+        "MED:UNAVAILABLE3"
+      ],
+      "pmcids": [],
+      "query": "internalization assay control",
+      "gold_passage_ids": [],
+      "gold_document_sha256": [],
+      "gold_section": null,
+      "gold_quote": null,
+      "expected": "unknown",
+      "source_url": null
+    },
+    {
+      "case_id": "A-UA-004",
+      "category": "fulltext_unavailable_control",
+      "record_ids": [
+        "MED:UNAVAILABLE4"
+      ],
+      "pmcids": [],
+      "query": "internalization assay control",
+      "gold_passage_ids": [],
+      "gold_document_sha256": [],
+      "gold_section": null,
+      "gold_quote": null,
+      "expected": "unknown",
+      "source_url": null
+    }
+  ]
+}

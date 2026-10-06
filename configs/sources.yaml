@@ -1,0 +1,164 @@
+# 数据源注册表（Data Source Registry）
+#
+# 这是把「硬编码抓取脚本」变成「可插拔数据源」的核心文件。
+# Agent 不认识具体数据库，它只认识「证据维度(dimension)」；
+# 需要某个维度的证据时，来这张表里挑一个能提供该维度、且当前可用的源。
+#
+# 新增一个数据源 = 在这里加一段 + 在 src/evidence_core/sources/ 加一个 parser 文件。
+# 详见 docs/07_扩展指南.md「新增一个数据源」。
+#
+# 字段说明：
+#   provides      : 该源能提供哪些证据维度（Agent 选源的依据）
+#   layer         : 证据层级 rna / protein / functional / clinical —— 用于冲突检测与去重
+#   reliability   : high / medium / low —— 冲突仲裁时的优先级
+#   independence_group : 同组的源视为「同一份原始数据的转载」，不构成独立多源支持
+#   api           : 接口配置。**当前留空待接入**，为空时该源自动标记为 unavailable
+#   fallback      : 该源不可用时的候选替代源（按顺序尝试）
+#   cost_weight   : 相对调用成本，用于预算控制与 early-kill 收益评估
+
+# ============================================================
+# 结构化数据库
+# ============================================================
+
+hpa:
+  name: Human Protein Atlas
+  provides: [normal_reference_expression, offtarget_expression, surface_localization, tumor_expression]
+  layer: protein
+  reliability: high
+  independence_group: hpa
+  cost_weight: 1
+  api:
+    base_url: "https://www.proteinatlas.org"   # 公开接口，无需 key
+    api_key_env: ""                            # 不需要
+    enabled: true
+  fallback: [uniprot, gtex, fixtures]
+  notes: 提供蛋白层证据与亚细胞定位，是判断膜定位的首选源。定位失败时先问 UniProt，避免 fixture 膜分抢在分泌注释前面。
+
+gtex:
+  name: GTEx v8
+  provides: [normal_reference_expression, offtarget_expression, safety]
+  layer: rna
+  reliability: high
+  independence_group: gtex
+  cost_weight: 1
+  api:
+    base_url: "https://gtexportal.org/api/v2"
+    api_key_env: ""
+    enabled: true
+  fallback: [hpa, fixtures]
+  notes: 正常组织 median TPM，脱靶惩罚与关键器官安全风险的主要来源
+
+cbioportal:
+  name: cBioPortal (TCGA)
+  provides: [tumor_expression, heterogeneity]
+  layer: rna
+  reliability: high
+  independence_group: tcga
+  cost_weight: 2
+  api:
+    base_url: "https://www.cbioportal.org/api"
+    api_key_env: ""
+    enabled: true
+  fallback: [tcga_gdc, fixtures]
+  notes: 队列 id 由癌种配置 sources.cbioportal 提供；bulk RNA 可能混入正常组织信号
+
+tcga_gdc:
+  name: GDC / TCGA Portal
+  provides: [tumor_expression, heterogeneity]
+  layer: rna
+  reliability: high
+  independence_group: tcga          # 与 cbioportal 同源，不算独立证据
+  cost_weight: 3
+  api:
+    base_url: "https://api.gdc.cancer.gov"
+    api_key_env: ""
+    enabled: false
+  fallback: [fixtures]
+  notes: 与 cBioPortal 同属 TCGA 原始数据，互为备用但不构成独立多源支持
+
+depmap:
+  name: DepMap
+  provides: [tumor_expression, heterogeneity]
+  layer: rna
+  reliability: medium
+  independence_group: depmap
+  cost_weight: 2
+  api:
+    base_url: ""                    # DepMap 无稳定公开 JSON 接口
+    api_key_env: ""
+    enabled: false
+    local_file: ""                  # TODO: 可指向本地下载的 OmicsExpression CSV
+  fallback: [fixtures]
+  notes: 细胞系表达，作旁证与 evidence_level 加成，不直接决定主分数
+
+uniprot:
+  name: UniProt
+  provides: [surface_localization, extracellular_accessibility, shedding]
+  layer: protein
+  reliability: high
+  independence_group: uniprot
+  cost_weight: 1
+  api:
+    base_url: "https://rest.uniprot.org"
+    api_key_env: ""
+    enabled: true
+  fallback: [hpa, fixtures]
+  notes: 拓扑结构、跨膜域、GPI 锚定、已知 shedding 位点
+
+# ============================================================
+# 文献 / 临床
+# ============================================================
+
+pubmed:
+  name: PubMed / Europe PMC
+  provides: [internalization, ligand_availability, clinical_precedent, delivery_precedent, endosomal_escape, shedding, biodistribution]
+  layer: functional
+  reliability: medium
+  independence_group: literature
+  cost_weight: 4
+  api:
+    base_url: "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
+    api_key_env: "NCBI_API_KEY"     # 可选：不设置也能跑，只是限速较低（3 req/s）
+    api_key_required: false
+    enabled: true
+  fallback: [fixtures]
+  notes: 功能性证据（内吞、配体）主要来源；claim 必须经 Verifier 校验
+
+clinicaltrials:
+  name: ClinicalTrials.gov
+  provides: [clinical_precedent, delivery_precedent]
+  layer: clinical
+  reliability: high
+  independence_group: clinicaltrials
+  cost_weight: 2
+  api:
+    base_url: "https://clinicaltrials.gov/api/v2"
+    api_key_env: ""
+    enabled: true
+  fallback: [pubmed, fixtures]
+  notes: 判断该靶点是否已有在研/上市递送先例
+
+# ============================================================
+# 离线 fixture 源（始终可用，保证无网络/无 API 时全链路可跑）
+# ============================================================
+
+fixtures:
+  name: Local Fixtures
+  provides: [tumor_expression, normal_reference_expression, offtarget_expression, surface_localization,
+             extracellular_accessibility, internalization, ligand_availability, clinical_precedent,
+             delivery_precedent, endosomal_escape, biodistribution, safety, shedding, heterogeneity]
+  layer: mixed
+  reliability: low                  # 明确标低：fixture 证据不能冒充真实证据
+  independence_group: fixtures
+  cost_weight: 0
+  api:
+    base_url: ""
+    api_key_env: ""
+    enabled: true                   # 唯一默认可用的源
+    data_dir: "data/fixtures"
+  fallback: []
+  notes: |
+    离线可复现数据，用途有三：
+    1) 未接入真实 API 时跑通端到端流程与 demo；
+    2) 单元测试与评测的确定性输入；
+    3) API 全部失败时的兜底，报告中会显式标注 evidence_level 降级。

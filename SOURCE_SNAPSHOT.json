@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "canonical_repository": "duohaocui-eng/SearchAndVerifyCycle_agents",
+  "canonical_branch": "prep/project-workbench",
+  "canonical_source_commit": "b548fd4f7fa924396a69217bb822c72af3c75890",
+  "publication_model": "fresh curated snapshot; canonical to public is one-way",
+  "included_roots": [
+    "src/",
+    "configs/",
+    "data/fixtures/",
+    "tests/ (seven selected files, 111 tests)",
+    "evals/verify_claims.py",
+    "evals/failure_driven_redesign/live_budget.py",
+    "evidence/",
+    "docs/",
+    "examples/"
+  ],
+  "evidence_sha256": {
+    "evidence/authority_isolation/CASES.json": "cb36b15f0ca228f7639ac2be5eae43eb83b9cbb26b02d9deff1e74d4392ba7cc",
+    "evidence/authority_isolation/METRICS.json": "6b1f82d8b220ed281c86e50754dca4097fe17563707b3668fbceae44c9ac7de4",
+    "evidence/authority_isolation/PROTOCOL.md": "ae6620d42c7112b9c5c12451ddc3b0020a306056dfe1a8787621d5cfabd0811d",
+    "evidence/authority_isolation/RESULTS.csv": "d9bce0115578d71d5acc24bdee877937dedf581d01183e2e4818da140240b21b",
+    "evidence/oa_fulltext/CASES.json": "cf239e08ac03119df56e49edfc09991e944d93ff55518a1c0c62a1e719b38f9d",
+    "evidence/oa_fulltext/METRICS.json": "c7a30f9db04896127837472cc5d486d46135293a9991b1c1279562ffccef3a6f",
+    "evidence/oa_fulltext/PROTOCOL.md": "8f20775ffd8ba344e07f5688a86a433b0653253959bbdbd6a78c5978b702d48f",
+    "evidence/oa_fulltext/RESULTS.csv": "2936ac81eff1a193e12279fbd2c1ed3de486c5abfbff13d67c3ee9a60099428c",
+    "evidence/strategy_holdout/ARMS.json": "5c5f508d1ff96e09b1b263c6be30c3c8039acadae7ae59ee07217d700febf1b6",
+    "evidence/strategy_holdout/CASES.json": "8db0358da492f9dde9397cb1d35287779d6c2f3ef4c2fe40dd4d76f921fce30e",
+    "evidence/strategy_holdout/METRICS.json": "b5b8da0e0ae8ab11c228e6d3fd0e8d260e53a3ff2d3186e628e892730a6af4a9",
+    "evidence/strategy_holdout/PAIRWISE.json": "ddcad0ddc3e4d122f0c22485fe9aa23a3e62cfa5b69abaf76af9ef32ee6ca76e",
+    "evidence/strategy_holdout/PROTOCOL.md": "ec92233ef42608c774632d959030514febed7b70c2eff091ec46c7183f52e5ab",
+    "evidence/strategy_holdout/RUNS.csv": "a7faf2376cf9da2afe0ddb94397776bef71a567c114377b152344206a7b6d529",
+    "evidence/strategy_holdout/SOURCE_PROVENANCE.json": "e2a3a2f3463a099d0582bfeeaf03260b3596fe3dd60660e2a4fc15bf5d2af8fd",
+    "evidence/strategy_holdout/STABILITY.json": "a8ff96d518c084be8ffa2d644368853ab39c5639efc5d529e00638a0a458dd69"
+  },
+  "license": null,
+  "license_note": "No license decision was present in the canonical repository; none is asserted here."
+}

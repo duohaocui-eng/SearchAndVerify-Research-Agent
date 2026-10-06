@@ -1,0 +1,52 @@
+# 癌种配置：肺腺癌 LUAD
+#
+# 第二癌种，用于验证「换配置不改代码」的跨癌种通用性（evals hcc_019 / hcc_020）。
+# 参照正常组织是肺——bulk_confounding 与 reference_tissue_dominant 都必须按肺生效。
+
+cancer_id: luad
+cancer_type_short: LUAD
+cancer_type_full: Lung Adenocarcinoma (肺腺癌)
+
+reference_normal_tissue: Lung
+reference_normal_tissue_label: 正常肺
+
+critical_risk_tissues:
+  - Whole_Blood
+  - Bone_Marrow
+  - Heart_Left_Ventricle
+  - Brain_Cortex
+
+offtarget_scan_tissues:
+  - Liver
+  - Kidney_Cortex
+  - Pancreas
+  - Small_Intestine_Terminal_Ileum
+  - Colon_Transverse
+  - Skin_Sun_Exposed_Lower_leg
+  - Spleen
+  - Stomach
+
+sources:
+  cbioportal:
+    study_id: luad_tcga
+    molecular_profile_id: luad_tcga_rna_seq_v2_mrna
+    sample_list_id: luad_tcga_rna_seq_v2_mrna
+  tcga:
+    project_id: TCGA-LUAD
+  depmap:
+    lineage: Lung
+    oncotree_code: LUAD
+  literature:
+    query_terms:
+      - lung adenocarcinoma
+      - LUAD
+      - NSCLC
+
+# 评测参照（不参与评分）
+expected_order: [CEACAM5, TACSTD2, EGFR]
+benchmark_targets: [SFTPC]
+
+candidate_generation:
+  max_candidates: 40
+  shortlist_size: 6
+  require_membrane: true

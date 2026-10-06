@@ -1,0 +1,32 @@
+{
+  "task_id": "C3-20260930-001",
+  "case_count": 38,
+  "profiles": {
+    "abstract_only": {
+      "positive_cases": 28,
+      "gold_passage_localization_success": 10,
+      "gold_passage_localization_rate": 0.35714285714285715,
+      "unknown_controls": 10,
+      "unknown_preserved": 10,
+      "unsupported_admissions": 0,
+      "model_calls": 0,
+      "network_calls": 0
+    },
+    "oa_fulltext": {
+      "positive_cases": 28,
+      "gold_passage_localization_success": 28,
+      "gold_passage_localization_rate": 1.0,
+      "unknown_controls": 10,
+      "unknown_preserved": 8,
+      "unsupported_admissions": 2,
+      "model_calls": 0,
+      "network_calls": 0
+    }
+  },
+  "paired": {
+    "oa_win": 18,
+    "tie": 18,
+    "oa_loss": 2,
+    "interpretation": "win/tie/loss combines positive localization and correct unknown preservation"
+  }
+}

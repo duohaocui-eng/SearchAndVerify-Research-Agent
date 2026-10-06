@@ -1,0 +1,71 @@
+{
+  "task_id": "C3-20260930-003",
+  "runs": 60,
+  "cases": 15,
+  "profiles": {
+    "stepwise": {
+      "runs": 30,
+      "completed": 29,
+      "audit_pass": 30,
+      "gold_found": 26,
+      "calls": 135,
+      "input_tokens": 317209,
+      "output_tokens": 47198,
+      "cached_input_tokens": 77563,
+      "cny_upper_bound": 1.0120019999999998,
+      "mean_seconds": 50.65333333333333,
+      "errors": 8,
+      "mean_record_jaccard": 0.8666666666666667,
+      "mean_passage_jaccard": 0.49277777777777776,
+      "same_gold_outcome": 13,
+      "same_completion": 14
+    },
+    "compact": {
+      "runs": 30,
+      "completed": 29,
+      "audit_pass": 30,
+      "gold_found": 27,
+      "calls": 141,
+      "input_tokens": 322033,
+      "output_tokens": 44674,
+      "cached_input_tokens": 135542,
+      "cny_upper_bound": 1.001458,
+      "mean_seconds": 33.00033333333333,
+      "errors": 12,
+      "mean_record_jaccard": 0.9333333333333333,
+      "mean_passage_jaccard": 0.6579365079365079,
+      "same_gold_outcome": 14,
+      "same_completion": 14
+    }
+  },
+  "pairwise": {
+    "left": "stepwise",
+    "right": "compact",
+    "left_gold_wins": 1,
+    "left_gold_losses": 2,
+    "gold_ties": 27,
+    "pairs": 30,
+    "left_completed": 29,
+    "right_completed": 29
+  },
+  "disagreements": 3,
+  "overall": {
+    "completed": 58,
+    "audit_pass": 60,
+    "gold_found": 53,
+    "calls": 276,
+    "cny_upper_bound": 2.0134600000000002,
+    "errors": 20
+  },
+  "ledger_after": {
+    "calls": 828,
+    "cny_upper_bound": 6.046241999999989,
+    "states": {
+      "reported_usage_peak_price_bound": 828
+    },
+    "max_cny": 13,
+    "invoice_cost": null,
+    "pricing_source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+  },
+  "scope": "Independent target holdout for gold-record localization and mechanical provenance; not medical truth or human review."
+}

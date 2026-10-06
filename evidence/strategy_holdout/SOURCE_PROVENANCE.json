@@ -1,0 +1,197 @@
+[
+  {
+    "case_id": "HOLDOUT-01-HER2-BIPARATOPIC",
+    "target": "HER2",
+    "gold_record_ids": [
+      "MED:34833033"
+    ],
+    "pmid": "34833033",
+    "pmcid": "PMC8624325",
+    "title": "A Tetravalent Biparatopic Antibody Causes Strong HER2 Internalization and Inhibits Cellular Proliferation",
+    "source_url": "https://europepmc.org/article/MED/34833033",
+    "fulltext_url": "https://europepmc.org/articles/PMC8624325",
+    "evidence_locator": "HER2 internalization assays and proliferation comparison"
+  },
+  {
+    "case_id": "HOLDOUT-02-PSMA-LIPOSOMES",
+    "target": "PSMA",
+    "gold_record_ids": [
+      "MED:42797325"
+    ],
+    "pmid": "42797325",
+    "pmcid": "PMC13610626",
+    "title": "PSMA-Targeted Liposomes for Therapeutic Delivery into a Prostate Cancer Cell Model",
+    "source_url": "https://europepmc.org/article/MED/42797325",
+    "fulltext_url": "https://europepmc.org/articles/PMC13610626",
+    "evidence_locator": "PSMA ligand-receptor uptake and liposome delivery experiments"
+  },
+  {
+    "case_id": "HOLDOUT-03-FOLR1-DUAL-PDC",
+    "target": "FOLR1",
+    "gold_record_ids": [
+      "MED:42794979"
+    ],
+    "pmid": "42794979",
+    "pmcid": "PMC13604648",
+    "title": "A Dual-Ligand PDC Co-Targeting FOLR1 and c-Met Enhances Tumor Accumulation and Antitumor Efficacy in Ovarian Cancer",
+    "source_url": "https://europepmc.org/article/MED/42794979",
+    "fulltext_url": "https://europepmc.org/articles/PMC13604648",
+    "evidence_locator": "binding, internalization, receptor-blocking, and expression-model assays"
+  },
+  {
+    "case_id": "HOLDOUT-04-MSLN-FUSION-TOXIN",
+    "target": "mesothelin",
+    "gold_record_ids": [
+      "MED:42666587"
+    ],
+    "pmid": "42666587",
+    "pmcid": "PMC13522408",
+    "title": "Novel PE-DT-fusion toxin enhances internalization and target-dependently restores the cytotoxicity of recombinant immunotoxins",
+    "source_url": "https://europepmc.org/article/MED/42666587",
+    "fulltext_url": "https://europepmc.org/articles/PMC13522408",
+    "evidence_locator": "time-dependent uptake, poly-D-lysine competition, and target-dependent cytotoxicity"
+  },
+  {
+    "case_id": "HOLDOUT-05-EGFR-PHOTOACTIVATION",
+    "target": "EGFR",
+    "gold_record_ids": [
+      "MED:42333517"
+    ],
+    "pmid": "42333517",
+    "pmcid": "PMC13456550",
+    "title": "Internalization-Dependent EGFR-Targeted Photoactivation by Cetuximab-I21 Conjugates",
+    "source_url": "https://europepmc.org/article/MED/42333517",
+    "fulltext_url": "https://europepmc.org/articles/PMC13456550",
+    "evidence_locator": "receptor-mediated internalization, lysosomal colocalization, and photoactivation controls"
+  },
+  {
+    "case_id": "HOLDOUT-06-CD71-POLYMER-NP",
+    "target": "CD71",
+    "gold_record_ids": [
+      "MED:42199657"
+    ],
+    "pmid": "42199657",
+    "pmcid": "PMC13200204",
+    "title": "Transferrin-Functionalized Conjugated Polymer Nanoparticles for Enhanced Photodynamic Therapy of Glioblastoma",
+    "source_url": "https://europepmc.org/article/MED/42199657",
+    "fulltext_url": "https://europepmc.org/articles/PMC13200204",
+    "evidence_locator": "cellular uptake, receptor specificity, photodynamic readout, orthotopic model"
+  },
+  {
+    "case_id": "HOLDOUT-07-CD44-ENDOSOMAL-ESCAPE",
+    "target": "CD44",
+    "gold_record_ids": [
+      "MED:42797312"
+    ],
+    "pmid": "42797312",
+    "pmcid": "PMC13610421",
+    "title": "Evaluation of Histidine-Octamer-Modified Hyaluronic Acid as a Cytosolic Drug Delivery Material via CD44-Mediated Cellular Uptake and Endosomal Escape",
+    "source_url": "https://europepmc.org/article/MED/42797312",
+    "fulltext_url": "https://europepmc.org/articles/PMC13610421",
+    "evidence_locator": "CD44-mediated uptake and endosomal escape assays"
+  },
+  {
+    "case_id": "HOLDOUT-08-EPCAM-RADIOANTIBODY",
+    "target": "EpCAM",
+    "gold_record_ids": [
+      "MED:42540187"
+    ],
+    "pmid": "42540187",
+    "pmcid": "PMC13425302",
+    "title": "Development and Preclinical Evaluation of a Novel EpCAM-Targeted 111In-Labeled Antibody for SPECT Imaging",
+    "source_url": "https://europepmc.org/article/MED/42540187",
+    "fulltext_url": "https://europepmc.org/articles/PMC13425302",
+    "evidence_locator": "DLD-1 internalization, blocking, plasma stability, biodistribution, SPECT"
+  },
+  {
+    "case_id": "HOLDOUT-09-CAIX-THERANOSTIC",
+    "target": "CAIX",
+    "gold_record_ids": [
+      "MED:42559379"
+    ],
+    "pmid": "42559379",
+    "pmcid": "PMC13440624",
+    "title": "Structure-based redesign enables clinical translation of CAIX-targeted theranostics in clear cell renal cell carcinoma",
+    "source_url": "https://europepmc.org/article/MED/42559379",
+    "fulltext_url": "https://europepmc.org/articles/PMC13440624",
+    "evidence_locator": "tumor uptake versus gastrointestinal retention across preclinical and first-in-human measurements"
+  },
+  {
+    "case_id": "HOLDOUT-10-PDL1-SURFACE-DYNAMICS",
+    "target": "PD-L1",
+    "gold_record_ids": [
+      "MED:42652042"
+    ],
+    "pmid": "42652042",
+    "pmcid": "PMC13510185",
+    "title": "Temporal Dynamics of PD-L1 Surface in RKO Cells: Characterizing the Reversible Impact of the Small-Molecule Dimerizer BMS-202",
+    "source_url": "https://europepmc.org/article/MED/42652042",
+    "fulltext_url": "https://europepmc.org/articles/PMC13510185",
+    "evidence_locator": "low-pH wash internalization assay and 5-15 minute surface recovery dynamics"
+  },
+  {
+    "case_id": "HOLDOUT-11-ROR1-ADC",
+    "target": "ROR1",
+    "gold_record_ids": [
+      "MED:42023144"
+    ],
+    "pmid": "42023144",
+    "pmcid": "PMC13098526",
+    "title": "Targeting ROR1 with humanized antibody drug conjugates and cytokine fusion proteins for cancer therapy",
+    "source_url": "https://europepmc.org/article/MED/42023144",
+    "fulltext_url": "https://europepmc.org/articles/PMC13098526",
+    "evidence_locator": "confocal internalization, epitope comparison, ADC cytotoxicity, in-vivo models"
+  },
+  {
+    "case_id": "HOLDOUT-12-NECTIN4-CRB701",
+    "target": "Nectin-4",
+    "gold_record_ids": [
+      "MED:42636059"
+    ],
+    "pmid": "42636059",
+    "pmcid": "PMC13576400",
+    "title": "CRB-701: A Second-generation Nectin-4-Targeted Antibody-Drug Conjugate with Optimized Stability and Pharmacokinetics for the Treatment of Solid Tumors",
+    "source_url": "https://europepmc.org/article/MED/42636059",
+    "fulltext_url": "https://europepmc.org/articles/PMC13576400",
+    "evidence_locator": "internalization, MMAE delivery, expression panel, pharmacokinetics and safety"
+  },
+  {
+    "case_id": "HOLDOUT-13-TROP2-TRTAC",
+    "target": "TROP2",
+    "gold_record_ids": [
+      "MED:42801692"
+    ],
+    "pmid": "42801692",
+    "pmcid": "PMC13616387",
+    "title": "TROP2-Targeting Chimeras (TRTACs) for Tumor Cell-Selective Membrane Protein Degradation and Enhanced Drug Delivery",
+    "source_url": "https://europepmc.org/article/MED/42801692",
+    "fulltext_url": "https://europepmc.org/articles/PMC13616387",
+    "evidence_locator": "TROP2-directed internalization, lysosomal degradation, selectivity and delivery assays"
+  },
+  {
+    "case_id": "HOLDOUT-14-CLDN18-SOT102",
+    "target": "CLDN18",
+    "gold_record_ids": [
+      "MED:42168932"
+    ],
+    "pmid": "42168932",
+    "pmcid": "PMC13348002",
+    "title": "SOT102, a novel CLDN18.2-targeting antibody-drug conjugate, exhibits strong therapeutic potential in solid tumors",
+    "source_url": "https://europepmc.org/article/MED/42168932",
+    "fulltext_url": "https://europepmc.org/articles/PMC13348002",
+    "evidence_locator": "CLDN18.2 binding selectivity, internalization, organoid cytotoxicity and xenografts"
+  },
+  {
+    "case_id": "HOLDOUT-15-B7H3-ADC",
+    "target": "B7-H3",
+    "gold_record_ids": [
+      "MED:42075852"
+    ],
+    "pmid": "42075852",
+    "pmcid": "PMC13118972",
+    "title": "A Moderate-Affinity Antibody-Drug Conjugate Targeting B7-H3 Exerts Potent Antitumor Efficacy",
+    "source_url": "https://europepmc.org/article/MED/42075852",
+    "fulltext_url": "https://europepmc.org/articles/PMC13118972",
+    "evidence_locator": "BLI, flow cytometry, high-content internalization, cytotoxicity, PK and xenografts"
+  }
+]

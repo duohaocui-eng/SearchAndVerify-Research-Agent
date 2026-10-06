@@ -1,0 +1,10 @@
+{
+  "left": "stepwise",
+  "right": "compact",
+  "left_gold_wins": 1,
+  "left_gold_losses": 2,
+  "gold_ties": 27,
+  "pairs": 30,
+  "left_completed": 29,
+  "right_completed": 29
+}

@@ -1,0 +1,104 @@
+# Agent 运行配置：预算、阈值与消融开关
+#
+# 这里所有 ablation.* 开关都是为了回答「Agent 到底比固定工作流强在哪」。
+# 关掉某个开关再跑一遍评测，就是一次消融实验。详见 docs/06_评测与消融方案.md。
+
+# ============================================================
+# 预算控制（防止无限搜索，对应 Q17 停止条件）
+# ============================================================
+# 注意：预算要留足够余量给固定工作流基线跑完，否则对照实验里
+# 基线会因预算耗尽提前中止，让 Agent 的成本优势被严重低估。
+budget:
+  max_steps: 250                # 主循环最大步数
+  max_source_calls: 400         # 最大数据源调用次数
+  max_cost_units: 800           # 按 sources.yaml 的 cost_weight 累计
+  max_seconds: 900              # 墙钟超时
+  per_candidate_max_calls: 40   # 单个候选最多花多少次调用，防止钻牛角尖
+
+# ============================================================
+# 停止条件（满足任一即停）
+# ============================================================
+stopping:
+  min_coverage: 0.80            # 只代表筛选阶段覆盖率
+  require_delivery_verification: true  # 短名单必须补齐递送验证维度，否则 needs_more
+  no_progress_rounds: 5
+  shortlist_settled: true
+
+# ============================================================
+# early-kill 规则（确定性，不交给 LLM —— 对应 Q16 / Q51）
+# ============================================================
+early_kill:
+  enabled: true
+  rules:
+    - id: no_membrane
+      severity: hard
+      when: "surface_localization_score < 4"
+      reason: 细胞表面定位证据不足，非递送可及靶点
+    - id: not_accessible
+      severity: hard
+      when: "extracellular_accessibility_score < 4"
+      reason: 细胞外可及性弱
+    - id: normal_tissue_risk
+      severity: risk
+      when: "normal_tissue_penalty >= 8.5"
+      reason: 关键正常组织高表达，安全窗过窄
+    - id: reference_tissue_dominant
+      severity: demote_if_membrane
+      when: "normal_reference_tissue_expression_score >= 8.5 and tumor_expression_score < 6"
+      reason: 参照正常组织表达远高于肿瘤，属正常组织递送而非肿瘤靶向
+    - id: weak_internalization
+      severity: risk
+      when: "internalization_score < 4"
+      reason: 内吞证据弱，配体偶联难以入胞
+  # 被 early-kill 的候选不再做昂贵深搜，但保留已有证据与 kill 理由，可回放
+
+# ============================================================
+# 证据与验证
+# ============================================================
+evidence:
+  required_dimensions:          # 筛选阶段必需维度
+    - tumor_expression
+    - normal_reference_expression
+    - surface_localization
+    - safety
+  delivery_required_dimensions: # 短名单递送验证阶段必需维度
+    - extracellular_accessibility
+    - internalization
+    - delivery_precedent
+  min_independent_sources: 2
+  conflict_tolerance: 2.0
+
+verification:
+  enabled: true                 # 消融时可关：对应 Q56「去掉 Verifier」
+  # rule | llm | hybrid。当前默认 hybrid：规则先过一遍，通过的再交 LLM 复核。
+  # 需要 LLM_API_KEY / LLM_BASE_URL / LLM_MODEL（可写在项目根 .env）。
+  mode: hybrid
+  reject_action: refetch        # 引用不支持 claim 时：refetch 重搜 / drop 丢弃
+  max_refetch_per_claim: 2
+
+# ============================================================
+# 规划器
+# ============================================================
+planner:
+  # rule | llm。当前默认 llm（DeepSeek-V4-Flash）；未配置环境变量时自动降级为 rule。
+  mode: llm
+  dynamic_replanning: true      # 消融时可关：对应 Q55「退化为固定工作流」
+  allow_candidate_expansion: true
+
+# ============================================================
+# 消融开关总览（评测脚本按这些组合跑对照）
+# ============================================================
+ablation:
+  disable_verifier: false
+  disable_dynamic_replanning: false
+  disable_early_kill: false
+  structured_only: false        # true = 只用数据库不搜文献，对应 Q58
+
+# ============================================================
+# 输出
+# ============================================================
+output:
+  emit_legacy_columns: true     # 同时输出 hcc_* 旧列名，兼容既有闸门模型
+  save_trace: true
+  save_evidence: true
+  save_model_inputs: true       # 保存喂给 LLM 的原始输入，保证结论可回放（Q52）

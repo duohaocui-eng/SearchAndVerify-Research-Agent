@@ -1,0 +1,542 @@
+[
+  {
+    "name": "holdout_01_her2_biparatopic_stepwise_1",
+    "case_id": "HOLDOUT-01-HER2-BIPARATOPIC",
+    "target": "HER2",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "How did a tetravalent biparatopic antibody compare with established HER2 antibodies for receptor internalization and inhibition of proliferation, and which cellular systems, time course, readouts, and limitations were reported?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_01_her2_biparatopic_stepwise_2",
+    "case_id": "HOLDOUT-01-HER2-BIPARATOPIC",
+    "target": "HER2",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "How did a tetravalent biparatopic antibody compare with established HER2 antibodies for receptor internalization and inhibition of proliferation, and which cellular systems, time course, readouts, and limitations were reported?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_01_her2_biparatopic_compact_1",
+    "case_id": "HOLDOUT-01-HER2-BIPARATOPIC",
+    "target": "HER2",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "How did a tetravalent biparatopic antibody compare with established HER2 antibodies for receptor internalization and inhibition of proliferation, and which cellular systems, time course, readouts, and limitations were reported?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_01_her2_biparatopic_compact_2",
+    "case_id": "HOLDOUT-01-HER2-BIPARATOPIC",
+    "target": "HER2",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "How did a tetravalent biparatopic antibody compare with established HER2 antibodies for receptor internalization and inhibition of proliferation, and which cellular systems, time course, readouts, and limitations were reported?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_02_psma_liposomes_stepwise_1",
+    "case_id": "HOLDOUT-02-PSMA-LIPOSOMES",
+    "target": "PSMA",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "For two PSMA-targeted liposome platforms, what evidence distinguishes receptor-specific cellular uptake from nonspecific accumulation, and how were payload delivery, controls, and model limitations assessed?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_02_psma_liposomes_stepwise_2",
+    "case_id": "HOLDOUT-02-PSMA-LIPOSOMES",
+    "target": "PSMA",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "For two PSMA-targeted liposome platforms, what evidence distinguishes receptor-specific cellular uptake from nonspecific accumulation, and how were payload delivery, controls, and model limitations assessed?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_02_psma_liposomes_compact_1",
+    "case_id": "HOLDOUT-02-PSMA-LIPOSOMES",
+    "target": "PSMA",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "For two PSMA-targeted liposome platforms, what evidence distinguishes receptor-specific cellular uptake from nonspecific accumulation, and how were payload delivery, controls, and model limitations assessed?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_02_psma_liposomes_compact_2",
+    "case_id": "HOLDOUT-02-PSMA-LIPOSOMES",
+    "target": "PSMA",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "For two PSMA-targeted liposome platforms, what evidence distinguishes receptor-specific cellular uptake from nonspecific accumulation, and how were payload delivery, controls, and model limitations assessed?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_03_folr1_dual_pdc_stepwise_1",
+    "case_id": "HOLDOUT-03-FOLR1-DUAL-PDC",
+    "target": "FOLR1",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "How did a dual FOLR1/c-Met peptide-drug conjugate compare with single-ligand controls for binding and cellular internalization, and what did receptor-blocking and expression-model experiments establish or leave unresolved?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_03_folr1_dual_pdc_stepwise_2",
+    "case_id": "HOLDOUT-03-FOLR1-DUAL-PDC",
+    "target": "FOLR1",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "How did a dual FOLR1/c-Met peptide-drug conjugate compare with single-ligand controls for binding and cellular internalization, and what did receptor-blocking and expression-model experiments establish or leave unresolved?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_03_folr1_dual_pdc_compact_1",
+    "case_id": "HOLDOUT-03-FOLR1-DUAL-PDC",
+    "target": "FOLR1",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "How did a dual FOLR1/c-Met peptide-drug conjugate compare with single-ligand controls for binding and cellular internalization, and what did receptor-blocking and expression-model experiments establish or leave unresolved?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_03_folr1_dual_pdc_compact_2",
+    "case_id": "HOLDOUT-03-FOLR1-DUAL-PDC",
+    "target": "FOLR1",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "How did a dual FOLR1/c-Met peptide-drug conjugate compare with single-ligand controls for binding and cellular internalization, and what did receptor-blocking and expression-model experiments establish or leave unresolved?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_04_msln_fusion_toxin_stepwise_1",
+    "case_id": "HOLDOUT-04-MSLN-FUSION-TOXIN",
+    "target": "mesothelin",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "In the mesothelin arm of a PE-DT fusion-toxin study, how was time-dependent internalization compared with PE-based constructs, what competition or target-dependence controls were used, and how was uptake separated from cytotoxicity?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_04_msln_fusion_toxin_stepwise_2",
+    "case_id": "HOLDOUT-04-MSLN-FUSION-TOXIN",
+    "target": "mesothelin",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "In the mesothelin arm of a PE-DT fusion-toxin study, how was time-dependent internalization compared with PE-based constructs, what competition or target-dependence controls were used, and how was uptake separated from cytotoxicity?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_04_msln_fusion_toxin_compact_1",
+    "case_id": "HOLDOUT-04-MSLN-FUSION-TOXIN",
+    "target": "mesothelin",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "In the mesothelin arm of a PE-DT fusion-toxin study, how was time-dependent internalization compared with PE-based constructs, what competition or target-dependence controls were used, and how was uptake separated from cytotoxicity?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_04_msln_fusion_toxin_compact_2",
+    "case_id": "HOLDOUT-04-MSLN-FUSION-TOXIN",
+    "target": "mesothelin",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "In the mesothelin arm of a PE-DT fusion-toxin study, how was time-dependent internalization compared with PE-based constructs, what competition or target-dependence controls were used, and how was uptake separated from cytotoxicity?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_05_egfr_photoactivation_stepwise_1",
+    "case_id": "HOLDOUT-05-EGFR-PHOTOACTIVATION",
+    "target": "EGFR",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "What experiments show that cetuximab-I21 photoactivation depends on EGFR-mediated internalization and endolysosomal trafficking, and what receptor-expression, time-course, light, and cell-death controls delimit that conclusion?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_05_egfr_photoactivation_stepwise_2",
+    "case_id": "HOLDOUT-05-EGFR-PHOTOACTIVATION",
+    "target": "EGFR",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "What experiments show that cetuximab-I21 photoactivation depends on EGFR-mediated internalization and endolysosomal trafficking, and what receptor-expression, time-course, light, and cell-death controls delimit that conclusion?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_05_egfr_photoactivation_compact_1",
+    "case_id": "HOLDOUT-05-EGFR-PHOTOACTIVATION",
+    "target": "EGFR",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "What experiments show that cetuximab-I21 photoactivation depends on EGFR-mediated internalization and endolysosomal trafficking, and what receptor-expression, time-course, light, and cell-death controls delimit that conclusion?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_05_egfr_photoactivation_compact_2",
+    "case_id": "HOLDOUT-05-EGFR-PHOTOACTIVATION",
+    "target": "EGFR",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "What experiments show that cetuximab-I21 photoactivation depends on EGFR-mediated internalization and endolysosomal trafficking, and what receptor-expression, time-course, light, and cell-death controls delimit that conclusion?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_06_cd71_polymer_np_stepwise_1",
+    "case_id": "HOLDOUT-06-CD71-POLYMER-NP",
+    "target": "CD71",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "For transferrin-functionalized conjugated polymer nanoparticles in glioblastoma, how were CD71-dependent uptake, receptor specificity, photodynamic cytotoxicity, and in-vivo delivery tested, and which conclusions remain indirect?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_06_cd71_polymer_np_stepwise_2",
+    "case_id": "HOLDOUT-06-CD71-POLYMER-NP",
+    "target": "CD71",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "For transferrin-functionalized conjugated polymer nanoparticles in glioblastoma, how were CD71-dependent uptake, receptor specificity, photodynamic cytotoxicity, and in-vivo delivery tested, and which conclusions remain indirect?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_06_cd71_polymer_np_compact_1",
+    "case_id": "HOLDOUT-06-CD71-POLYMER-NP",
+    "target": "CD71",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "For transferrin-functionalized conjugated polymer nanoparticles in glioblastoma, how were CD71-dependent uptake, receptor specificity, photodynamic cytotoxicity, and in-vivo delivery tested, and which conclusions remain indirect?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_06_cd71_polymer_np_compact_2",
+    "case_id": "HOLDOUT-06-CD71-POLYMER-NP",
+    "target": "CD71",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "For transferrin-functionalized conjugated polymer nanoparticles in glioblastoma, how were CD71-dependent uptake, receptor specificity, photodynamic cytotoxicity, and in-vivo delivery tested, and which conclusions remain indirect?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_07_cd44_endosomal_escape_stepwise_1",
+    "case_id": "HOLDOUT-07-CD44-ENDOSOMAL-ESCAPE",
+    "target": "CD44",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "How was histidine-octamer-modified hyaluronic acid evaluated for CD44-mediated cellular uptake and endosomal escape, and which competition, localization, or cytosolic-delivery measurements distinguish entry from productive escape?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_07_cd44_endosomal_escape_stepwise_2",
+    "case_id": "HOLDOUT-07-CD44-ENDOSOMAL-ESCAPE",
+    "target": "CD44",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "How was histidine-octamer-modified hyaluronic acid evaluated for CD44-mediated cellular uptake and endosomal escape, and which competition, localization, or cytosolic-delivery measurements distinguish entry from productive escape?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_07_cd44_endosomal_escape_compact_1",
+    "case_id": "HOLDOUT-07-CD44-ENDOSOMAL-ESCAPE",
+    "target": "CD44",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "How was histidine-octamer-modified hyaluronic acid evaluated for CD44-mediated cellular uptake and endosomal escape, and which competition, localization, or cytosolic-delivery measurements distinguish entry from productive escape?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_07_cd44_endosomal_escape_compact_2",
+    "case_id": "HOLDOUT-07-CD44-ENDOSOMAL-ESCAPE",
+    "target": "CD44",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "How was histidine-octamer-modified hyaluronic acid evaluated for CD44-mediated cellular uptake and endosomal escape, and which competition, localization, or cytosolic-delivery measurements distinguish entry from productive escape?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_08_epcam_radioantibody_stepwise_1",
+    "case_id": "HOLDOUT-08-EPCAM-RADIOANTIBODY",
+    "target": "EpCAM",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "For an indium-111-labeled EpCAM antibody, what in-vitro assay measured cellular internalization, what time point and high-expression model were used, and how did blocking, stability, biodistribution, and SPECT results support or limit targeting claims?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_08_epcam_radioantibody_stepwise_2",
+    "case_id": "HOLDOUT-08-EPCAM-RADIOANTIBODY",
+    "target": "EpCAM",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "For an indium-111-labeled EpCAM antibody, what in-vitro assay measured cellular internalization, what time point and high-expression model were used, and how did blocking, stability, biodistribution, and SPECT results support or limit targeting claims?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_08_epcam_radioantibody_compact_1",
+    "case_id": "HOLDOUT-08-EPCAM-RADIOANTIBODY",
+    "target": "EpCAM",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "For an indium-111-labeled EpCAM antibody, what in-vitro assay measured cellular internalization, what time point and high-expression model were used, and how did blocking, stability, biodistribution, and SPECT results support or limit targeting claims?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_08_epcam_radioantibody_compact_2",
+    "case_id": "HOLDOUT-08-EPCAM-RADIOANTIBODY",
+    "target": "EpCAM",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "For an indium-111-labeled EpCAM antibody, what in-vitro assay measured cellular internalization, what time point and high-expression model were used, and how did blocking, stability, biodistribution, and SPECT results support or limit targeting claims?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_09_caix_theranostic_stepwise_1",
+    "case_id": "HOLDOUT-09-CAIX-THERANOSTIC",
+    "target": "CAIX",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "How did structure-guided redesign of a CAIX-targeted theranostic separate tumor uptake from gastrointestinal retention, and which affinity, pharmacokinetic, mouse-therapy, and first-in-human measurements support the claimed trade-off?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_09_caix_theranostic_stepwise_2",
+    "case_id": "HOLDOUT-09-CAIX-THERANOSTIC",
+    "target": "CAIX",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "How did structure-guided redesign of a CAIX-targeted theranostic separate tumor uptake from gastrointestinal retention, and which affinity, pharmacokinetic, mouse-therapy, and first-in-human measurements support the claimed trade-off?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_09_caix_theranostic_compact_1",
+    "case_id": "HOLDOUT-09-CAIX-THERANOSTIC",
+    "target": "CAIX",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "How did structure-guided redesign of a CAIX-targeted theranostic separate tumor uptake from gastrointestinal retention, and which affinity, pharmacokinetic, mouse-therapy, and first-in-human measurements support the claimed trade-off?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_09_caix_theranostic_compact_2",
+    "case_id": "HOLDOUT-09-CAIX-THERANOSTIC",
+    "target": "CAIX",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "How did structure-guided redesign of a CAIX-targeted theranostic separate tumor uptake from gastrointestinal retention, and which affinity, pharmacokinetic, mouse-therapy, and first-in-human measurements support the claimed trade-off?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_10_pdl1_surface_dynamics_stepwise_1",
+    "case_id": "HOLDOUT-10-PDL1-SURFACE-DYNAMICS",
+    "target": "PD-L1",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "Using the BMS-202 dimerizer, how did a low-pH wash assay distinguish intracellular from surface PD-L1 over time, what recovery kinetics were observed, and what remains unresolved about degradation versus recycling?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_10_pdl1_surface_dynamics_stepwise_2",
+    "case_id": "HOLDOUT-10-PDL1-SURFACE-DYNAMICS",
+    "target": "PD-L1",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "Using the BMS-202 dimerizer, how did a low-pH wash assay distinguish intracellular from surface PD-L1 over time, what recovery kinetics were observed, and what remains unresolved about degradation versus recycling?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_10_pdl1_surface_dynamics_compact_1",
+    "case_id": "HOLDOUT-10-PDL1-SURFACE-DYNAMICS",
+    "target": "PD-L1",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "Using the BMS-202 dimerizer, how did a low-pH wash assay distinguish intracellular from surface PD-L1 over time, what recovery kinetics were observed, and what remains unresolved about degradation versus recycling?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_10_pdl1_surface_dynamics_compact_2",
+    "case_id": "HOLDOUT-10-PDL1-SURFACE-DYNAMICS",
+    "target": "PD-L1",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "Using the BMS-202 dimerizer, how did a low-pH wash assay distinguish intracellular from surface PD-L1 over time, what recovery kinetics were observed, and what remains unresolved about degradation versus recycling?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_11_ror1_adc_stepwise_1",
+    "case_id": "HOLDOUT-11-ROR1-ADC",
+    "target": "ROR1",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "Which anti-ROR1 antibody was selected for rapid internalization, how was entry measured, and how did epitope choice, signaling blockade, ADC cytotoxicity, and ROR1-positive models connect internalization to efficacy?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_11_ror1_adc_stepwise_2",
+    "case_id": "HOLDOUT-11-ROR1-ADC",
+    "target": "ROR1",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "Which anti-ROR1 antibody was selected for rapid internalization, how was entry measured, and how did epitope choice, signaling blockade, ADC cytotoxicity, and ROR1-positive models connect internalization to efficacy?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_11_ror1_adc_compact_1",
+    "case_id": "HOLDOUT-11-ROR1-ADC",
+    "target": "ROR1",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "Which anti-ROR1 antibody was selected for rapid internalization, how was entry measured, and how did epitope choice, signaling blockade, ADC cytotoxicity, and ROR1-positive models connect internalization to efficacy?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_11_ror1_adc_compact_2",
+    "case_id": "HOLDOUT-11-ROR1-ADC",
+    "target": "ROR1",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "Which anti-ROR1 antibody was selected for rapid internalization, how was entry measured, and how did epitope choice, signaling blockade, ADC cytotoxicity, and ROR1-positive models connect internalization to efficacy?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_12_nectin4_crb701_stepwise_1",
+    "case_id": "HOLDOUT-12-NECTIN4-CRB701",
+    "target": "Nectin-4",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "For the CRB-701 Nectin-4 ADC, what experiments connect receptor-mediated internalization to intracellular MMAE delivery, and how were expression level, comparator activity, circulation stability, pharmacokinetics, and safety evaluated?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_12_nectin4_crb701_stepwise_2",
+    "case_id": "HOLDOUT-12-NECTIN4-CRB701",
+    "target": "Nectin-4",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "For the CRB-701 Nectin-4 ADC, what experiments connect receptor-mediated internalization to intracellular MMAE delivery, and how were expression level, comparator activity, circulation stability, pharmacokinetics, and safety evaluated?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_12_nectin4_crb701_compact_1",
+    "case_id": "HOLDOUT-12-NECTIN4-CRB701",
+    "target": "Nectin-4",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "For the CRB-701 Nectin-4 ADC, what experiments connect receptor-mediated internalization to intracellular MMAE delivery, and how were expression level, comparator activity, circulation stability, pharmacokinetics, and safety evaluated?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_12_nectin4_crb701_compact_2",
+    "case_id": "HOLDOUT-12-NECTIN4-CRB701",
+    "target": "Nectin-4",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "For the CRB-701 Nectin-4 ADC, what experiments connect receptor-mediated internalization to intracellular MMAE delivery, and how were expression level, comparator activity, circulation stability, pharmacokinetics, and safety evaluated?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_13_trop2_trtac_stepwise_1",
+    "case_id": "HOLDOUT-13-TROP2-TRTAC",
+    "target": "TROP2",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "How do TROP2-targeting chimeras recruit an internalization/lysosomal pathway for membrane-protein degradation, and which uptake, trafficking, degradation, selectivity, and drug-delivery assays establish mechanism versus downstream effect?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_13_trop2_trtac_stepwise_2",
+    "case_id": "HOLDOUT-13-TROP2-TRTAC",
+    "target": "TROP2",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "How do TROP2-targeting chimeras recruit an internalization/lysosomal pathway for membrane-protein degradation, and which uptake, trafficking, degradation, selectivity, and drug-delivery assays establish mechanism versus downstream effect?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_13_trop2_trtac_compact_1",
+    "case_id": "HOLDOUT-13-TROP2-TRTAC",
+    "target": "TROP2",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "How do TROP2-targeting chimeras recruit an internalization/lysosomal pathway for membrane-protein degradation, and which uptake, trafficking, degradation, selectivity, and drug-delivery assays establish mechanism versus downstream effect?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_13_trop2_trtac_compact_2",
+    "case_id": "HOLDOUT-13-TROP2-TRTAC",
+    "target": "TROP2",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "How do TROP2-targeting chimeras recruit an internalization/lysosomal pathway for membrane-protein degradation, and which uptake, trafficking, degradation, selectivity, and drug-delivery assays establish mechanism versus downstream effect?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_14_cldn18_sot102_stepwise_1",
+    "case_id": "HOLDOUT-14-CLDN18-SOT102",
+    "target": "CLDN18",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "For the CLDN18.2-targeted ADC SOT102, how were CLDN18.2 selectivity, internalization, organoid cytotoxicity, and xenograft efficacy measured, and which findings do not establish the same behavior for CLDN18.1 or normal tissue?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_14_cldn18_sot102_stepwise_2",
+    "case_id": "HOLDOUT-14-CLDN18-SOT102",
+    "target": "CLDN18",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "For the CLDN18.2-targeted ADC SOT102, how were CLDN18.2 selectivity, internalization, organoid cytotoxicity, and xenograft efficacy measured, and which findings do not establish the same behavior for CLDN18.1 or normal tissue?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_14_cldn18_sot102_compact_1",
+    "case_id": "HOLDOUT-14-CLDN18-SOT102",
+    "target": "CLDN18",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "For the CLDN18.2-targeted ADC SOT102, how were CLDN18.2 selectivity, internalization, organoid cytotoxicity, and xenograft efficacy measured, and which findings do not establish the same behavior for CLDN18.1 or normal tissue?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_14_cldn18_sot102_compact_2",
+    "case_id": "HOLDOUT-14-CLDN18-SOT102",
+    "target": "CLDN18",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "For the CLDN18.2-targeted ADC SOT102, how were CLDN18.2 selectivity, internalization, organoid cytotoxicity, and xenograft efficacy measured, and which findings do not establish the same behavior for CLDN18.1 or normal tissue?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_15_b7h3_adc_stepwise_1",
+    "case_id": "HOLDOUT-15-B7H3-ADC",
+    "target": "B7-H3",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "How was a moderate-affinity B7-H3 ADC characterized for binding and internalization, and how did flow cytometry, high-content analysis, expression-stratified cytotoxicity, pharmacokinetics, and xenografts qualify the efficacy claim?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_15_b7h3_adc_stepwise_2",
+    "case_id": "HOLDOUT-15-B7H3-ADC",
+    "target": "B7-H3",
+    "profile": "stepwise",
+    "mode": "standalone",
+    "question": "How was a moderate-affinity B7-H3 ADC characterized for binding and internalization, and how did flow cytometry, high-content analysis, expression-stratified cytotoxicity, pharmacokinetics, and xenografts qualify the efficacy claim?",
+    "repeat": 2
+  },
+  {
+    "name": "holdout_15_b7h3_adc_compact_1",
+    "case_id": "HOLDOUT-15-B7H3-ADC",
+    "target": "B7-H3",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "How was a moderate-affinity B7-H3 ADC characterized for binding and internalization, and how did flow cytometry, high-content analysis, expression-stratified cytotoxicity, pharmacokinetics, and xenografts qualify the efficacy claim?",
+    "repeat": 1
+  },
+  {
+    "name": "holdout_15_b7h3_adc_compact_2",
+    "case_id": "HOLDOUT-15-B7H3-ADC",
+    "target": "B7-H3",
+    "profile": "compact",
+    "mode": "standalone",
+    "question": "How was a moderate-affinity B7-H3 ADC characterized for binding and internalization, and how did flow cytometry, high-content analysis, expression-stratified cytotoxicity, pharmacokinetics, and xenografts qualify the efficacy claim?",
+    "repeat": 2
+  }
+]

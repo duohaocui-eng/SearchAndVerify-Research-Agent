@@ -1,0 +1,59 @@
+# 癌种配置模板（新增癌种时复制本文件改名为 <癌种小写>.yaml）
+#
+# 设计原则：Agent 引擎与具体癌种解耦。换癌种只改本文件，不改任何代码。
+# 本文件同时也是生成下游 delivery-gate-model/configs/indication.yaml 的数据源。
+#
+# 字段填写说明见 docs/07_扩展指南.md「新增一个癌种」。
+
+# ---- 身份 ----
+cancer_id: XXXX                       # 内部唯一 id，小写，如 hcc / luad / brca
+cancer_type_short: XXXX               # 简称，用于报告标题，如 HCC
+cancer_type_full: Full Name (中文名)   # 全称
+
+# ---- 参照正常组织（on-target/off-tumor 风险的核心参照）----
+# 与靶点共享表达、构成主要脱靶风险的正常组织。
+# HCC 是肝；B-ALL 是正常 B 细胞；前列腺癌是正常前列腺。
+reference_normal_tissue: ""           # GTEx 组织名，如 Liver
+reference_normal_tissue_label: ""     # 中文标签，如 正常肝
+
+# ---- 关键风险组织（安全窗否决用）----
+# 这些组织高表达会直接压缩安全窗，触发 safety_risk 上调。
+# 通用默认：骨髓、全血、心、脑（剂量限制性器官）。
+critical_risk_tissues:
+  - Whole_Blood
+  - Bone_Marrow
+  - Heart_Left_Ventricle
+  - Brain_Cortex
+
+# ---- 脱靶扫描组织（计算 normal_tissue_penalty 用）----
+# 取这些组织中表达最高者作为脱靶惩罚。留空表示扫描 GTEx 全部 54 个组织，
+# 最彻底但对接真实 API 后单个候选这一项就要发 54 次请求，很慢。
+# 建议显式列 6-10 个递送靶点常见脱靶风险组织（参考 hcc.yaml），
+# 覆盖面够用又不至于把大部分预算耗在一个维度上。
+offtarget_scan_tissues: []
+
+# ---- 数据源定位（哪些队列/数据集对应本癌种）----
+sources:
+  cbioportal:
+    study_id: ""                      # 如 lihc_tcga
+    molecular_profile_id: ""          # 如 lihc_tcga_rna_seq_v2_mrna
+    sample_list_id: ""                # 如 lihc_tcga_rna_seq_v2_mrna
+  tcga:
+    project_id: ""                    # 如 TCGA-LIHC
+  depmap:
+    lineage: ""                       # 如 Liver
+    oncotree_code: ""                 # 如 HCC
+  literature:
+    query_terms: []                   # 检索用同义词，如 [hepatocellular carcinoma, HCC, liver cancer]
+
+# ---- 评测参照（可留空）----
+# expected_order: 已知答案的参照排序，用于回归校验；留空则不做硬性排序校验。
+# benchmark_targets: 正常组织对照靶点，不应作为肿瘤主线。
+expected_order: []
+benchmark_targets: []
+
+# ---- 候选生成边界 ----
+candidate_generation:
+  max_candidates: 40                  # 候选池上限，防止无限扩展
+  shortlist_size: 8                   # 进入深度证据补充的短名单大小
+  require_membrane: true              # 是否强制要求膜定位（递送靶点通常必须）
